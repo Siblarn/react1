@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ShowH1Text from './component/ShowH1Text';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           <li>Is maintained by Facebook</li>
           <li>Power thousands of enterprise apps, including mobile apps.</li>
         </ul>
+        <ShowH1Text text="สวัสดี"/>
+        <ShowH1Text text="ดีจ้า"/>
       </header>
     </div>
   );
