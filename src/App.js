@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ShowH1Text from './component/ShowH1Text';
-import ShowH2Text from './component/ShowH2Text';
+import Footer from './component/Footer';
+import Header from './component/Header';
 function App() {
   return (
     <div className="App">
@@ -17,6 +17,8 @@ function App() {
         </ul>
 
       </header>
+      <Header/>
+      <Footer/>
     </div>
   );
 }
