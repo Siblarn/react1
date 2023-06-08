@@ -1,4 +1,4 @@
-export default function Header (prop) {
+export default function Body (prop) {
     const text = prop.text || ""
     return (
         <header>
