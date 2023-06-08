@@ -7,7 +7,7 @@ header {
   color: aliceblue;
   padding: 0px 180px;
   margin: 0;
-  font-size: 25px;
+  font-size: 23px;
   margin-right: 7px;
   font-weight: 300;
   line-height: 50px;
@@ -50,4 +50,10 @@ nav {
 
 .p {
   color: #DEEBF8;
+}
+
+.space{
+  color: #282D35;
+  background-color: #282D35;
+  margin: 1rem 1rem;
 }

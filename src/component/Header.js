@@ -14,6 +14,7 @@ export default function Header (prop) {
                 <li>Has well over 100K stars on GitHub</li>
                 <li>Is maintained by Facebook</li>
                 <li>Power thousands of enterprise apps, including mobile apps.</li>
+                <div className="space">-</div>
               </ul>
         </header>
         
