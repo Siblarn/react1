@@ -1,11 +1,13 @@
-import Body from '../component/Body';
-import Navbar from '../component/Navbar';
+// import Body2 from '../component/Body';
+// import Navbar from '../component/Navbar';
+// import Card from './component/Card';
 
-export default function FirstReact() {
-  return (
-    <>
-      <Navbar />
-      <Body />
-    </>
-  );
-}
+// export default function FirstReact() {
+//   return (
+//     <>
+//       {/* <Navbar /> */}
+//       {/* <Card/> */}
+//       {/* <Body2 /> */}
+//     </>
+//   );
+// }

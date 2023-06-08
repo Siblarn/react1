@@ -1,6 +1,6 @@
 .App {
   margin: 0rem 0rem;
-  background-color: #282D35;
+  background-color: white;
 }
 
 header {
@@ -20,7 +20,7 @@ Footer {
 
 nav {
   display: flex;
-  color: #61DAFB;
+  color: #fb6192;
   align-items: center;
   height: 4rem;
   margin-right: auto;
@@ -44,7 +44,7 @@ nav {
   display: flex;
   justify-content: space-between ;
   width: 100%;
-  background-color: #21222A;
+  background-color: #f2f2f4;
   align-items: center;
 }
 
@@ -54,6 +54,61 @@ nav {
 
 .space{
   color: #282D35;
-  background-color: #282D35;
+  background-color: white;
   margin: 1rem 1rem;
 }
+
+.card{
+  width: 100px;
+  height: 360px;
+  border-radius: 0px;
+  align-self: auto;
+  margin-bottom: 0px;
+
+
+}
+
+.redstar{
+  font-size: 16px;
+  align-items: center;
+  margin: 0px 0px;
+  line-height: 4px;
+  padding: 3px 3px;
+
+}
+.h1{
+  width: 20px;
+  font-size: 18px;
+  margin: 1px 4px;
+  line-height: 15px;
+  align-items: center;
+
+}
+.h3{
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0rem 0rem;
+  line-height: 26px;
+
+}
+.radianCard{
+  border-radius: 5%;
+  width: 200%;
+  height: 250px;
+  margin-bottom: 1px;
+  align-self: center;
+
+}
+.USA{
+  color: #767474;
+}
+.sp{
+  color: white;
+}
+.spaces{
+  color: white;
+  line-height: 15px;
+}
+
+
+
