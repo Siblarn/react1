@@ -5,20 +5,19 @@
 
 header {
   color: aliceblue;
-  padding: 0px 50px;
+  padding: 0px 180px;
   margin: 0;
   font-size: 25px;
   margin-right: 7px;
   font-weight: 300;
   line-height: 50px;
-
-
-  
 }
+
 Footer {
   color: aliceblue;
   padding: 10px 10px;
 }
+
 nav {
   display: flex;
   color: #61DAFB;
@@ -27,20 +26,14 @@ nav {
   margin-right: auto;
   font-weight: 700;
   padding: 0px 0px;
-  font-size: 22px;
-
-
-
-  
+  font-size: 22px;  
 }
+
 .nav1 {
   display: flex;
   color: #DEEBF8;
   padding: 10rem 3rem;
   font-size: 16px;
-  
-
-
 }
 
 #pic {
@@ -54,7 +47,7 @@ nav {
   background-color: #21222A;
   align-items: center;
 }
+
 .p {
   color: #DEEBF8;
-
 }
