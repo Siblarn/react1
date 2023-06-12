@@ -4,13 +4,13 @@ import "./App.css";
 // import Navbar from "./component/Navbar";
 // import Body2 from "./pages/component/Body2";
 // import Card from "./pages/component/Card";
-import Resume from "./Resume";
+// import Resume from "./Resume";
 
 function App() {
   return (
     <div className="App">
 
-      <Resume/>
+      {/* <Resume/> */}
       {/* <Navbar /> */}
       {/* <Card/> */}
       {/* <Body2 name='test'/> */}

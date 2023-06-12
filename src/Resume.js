@@ -18,6 +18,7 @@ export default function Resume (){
                         <div style={{fontWeight:'900'}}>Info </div>
                         <div style={{fontWeight:'400',padding:'0px 70px'}}>Female(22year)</div>
                     </div>
+                    
                         
                         <div className="h2" style={{display:'flex'}}>
                             <div>Address</div>
@@ -33,11 +34,13 @@ export default function Resume (){
             </div>  
         </div>
         <div>
-                    <div className="personal" style={{marginLeft:'150px',fontWeight:'550',fontSize:'20px',display:'flex',borderRight:'20px'}}>
-                        <div>PERSONAL DETAIL</div>
-                        <div style={{marginLeft:'190px'}}>EDUCATION</div>
+                    <div className="personal" style={{marginLeft:'150px',fontWeight:'550',fontSize:'20px',display:'flex',borderRight:'0px'}}>
+                        <div style={{marginRight:'90px',borderBottom:'0px'}}>PERSONAL DETAIL</div>
+                        <div className="redline" style={{borderLeft:'5px solid black',margin:'0px 0px',borderBottom: '0px'}}></div>
+                        <div style={{display:'flex'}}>
+                        <div style={{marginLeft:'70px'}}>EDUCATION</div>
                         <div style={{borderRight:'20px'}}></div>
-
+                        </div>
                     </div>
                 
                     <div className="nickname" style={{marginLeft:'150px',lineHeight:'55px',display:'flex'}}>
@@ -66,6 +69,7 @@ export default function Resume (){
                         <div style={{marginLeft:'43px'}}>Friendly</div>
                         <div style={{marginLeft:'370px'}}>GPA : 3.00</div>
                         
+                        
                     </div>
         
         </div>
@@ -73,8 +77,10 @@ export default function Resume (){
                     <div className="experience">
                         <div style={{display:'flex'}}>
                         <div style={{fontWeight:'750',fontSize:'22px',marginLeft:'195px',lineHeight:'100px'}}>EXPERIENCE</div>
-                        <div style={{alignItems:'center'}}></div>
+                        <div style={{display:'inline'}}>
+                            <hr class="solid" style={{}}></hr>
                         </div>
+                    </div>
                         <li style={{marginLeft:'190px'}}>Tido Tech Co.</li>
                     </div>
 
