@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TicTacToe(props) {
   const { value, state } = props;
   const [ticTac, setTicTac] = useState(value);
-
+  useEffect(()=>{
+    setTicTac(ticTac)
+  },[props])
   const handleValue = (bool) => {
     if (state !== "idle") {
       if (bool == "x") {

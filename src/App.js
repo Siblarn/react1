@@ -32,6 +32,8 @@ function App() {
   });
 
   const [a1, setA1] = useState(value.a1);
+  const [a2, setA2] = useState(value.a2);
+  const [a3, setA3] = useState(value.a3);
 
   const handleToggleXO = (value) => {
     if (state != "idle") {
@@ -43,12 +45,33 @@ function App() {
     }
   };
 
+  const cardTicTacStylr = {
+    width: "170px",
+    height: "170px",
+    backgroundColor: "gray",
+    justifyContent: "center",
+    alignItems: "center",
+    display: "flex",
+    border: "25px solid pink",
+    cursor: "pointer",
+  }
+
   useEffect(() => {
     console.log("effect work.");
-    if (a1 == "x") {
-      alert("x win");
-    }
-  }, [a1]);
+    console.log(value);
+    console.log(`${a1} - ${a2} - ${a3}`);
+    handleCheckWinner()
+  }, [a1,a2,a3]);
+
+  const handleCheckWinner = () => {
+    const arr = [a1,a2,a3]
+    const concat_arr = arr.join("");
+    console.log("concat_arr ",concat_arr);
+    if(concat_arr == "xxx") {
+      console.log("winer work");
+      alert(`THE WINER IS ${a1}`)
+   }
+  }
 
   return (
     <div className="App">
@@ -77,46 +100,51 @@ function App() {
         <div style={{ display: "flex" }}>
           <div
             onClick={() => {
-              const preValue = value;
-              value.a1 = handleToggleXO(value.a1);
-              setValue(preValue);
-              setA1(value.a1);
-              console.log(preValue);
+              setA1(handleToggleXO(a1));
             }}
           >
-            <TicTacToe value={a1} state={state} />
+            <div
+              style={cardTicTacStylr}
+            >
+              <div style={{ fontSize: "60px" }}> {a1}</div>
+            </div>
           </div>
           <div
             onClick={() => {
-              const preValue = value;
-              value.a2 = handleToggleXO(value.a2);
-              setValue(preValue);
-              console.log(preValue);
+              setA2(handleToggleXO(a2));
             }}
           >
-            <TicTacToe value={value.a2} state={state} />
+         
+            <div
+              style={cardTicTacStylr}
+            >
+              <div style={{ fontSize: "60px" }}> {a2}</div>
+            </div>
           </div>
           <div
             onClick={() => {
-              const preValue = value;
-              value.a3 = handleToggleXO(value.a3);
-              setValue(preValue);
-              console.log(preValue);
+              setA3(handleToggleXO(a3));
             }}
           >
-            <TicTacToe value={value.a3} state={state} />
+            {/* <TicTacToe value={value.a3} state={state} /> */}
+            <div
+              style={cardTicTacStylr}
+            >
+              <div style={{ fontSize: "60px" }}> {a3}</div>
+            </div>
           </div>
         </div>
         <div style={{ display: "flex" }}>
           <div
             onClick={() => {
               const preValue = value;
-              value.b1 = handleToggleXO(value.a1);
+              value.b1 = handleToggleXO(value.b1);
               setValue(preValue);
               console.log(preValue);
             }}
           >
             <TicTacToe value={value.b1} state={state} />
+            
           </div>
           <div
             onClick={() => {
