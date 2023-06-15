@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import TicTacToe from "./pages/component/props";
 import Start from "./pages/component/Start";
@@ -31,6 +31,8 @@ function App() {
     c3: "",
   });
 
+  const [a1, setA1] = useState(value.a1);
+
   const handleToggleXO = (value) => {
     if (state != "idle") {
       if (value == "x") {
@@ -40,6 +42,13 @@ function App() {
       }
     }
   };
+
+  useEffect(() => {
+    console.log("effect work.");
+    if (a1 == "x") {
+      alert("x win");
+    }
+  }, [a1]);
 
   return (
     <div className="App">
@@ -71,10 +80,11 @@ function App() {
               const preValue = value;
               value.a1 = handleToggleXO(value.a1);
               setValue(preValue);
+              setA1(value.a1);
               console.log(preValue);
             }}
           >
-            <TicTacToe value={value.a1} state={state} />
+            <TicTacToe value={a1} state={state} />
           </div>
           <div
             onClick={() => {
