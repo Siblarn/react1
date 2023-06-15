@@ -2,12 +2,11 @@ import { useState } from "react"
 // import TicTacToe from "./pages/component/props";
 
 export default function Start(props) {
-    const { value } = props;
+    const { value, func } = props;
     const[Start,setStart] = useState(value);
     const handleValue = (Boolean) => {
         if (Boolean) return "PLAY";
         return "Start";
-      
     };
   
     return(
