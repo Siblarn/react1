@@ -4,12 +4,11 @@ import { useState } from "react"
 
 
 export default function Start(props) {
-    const { value } = props;
+    const { value, func } = props;
     const[Start,setStart] = useState(value);
     const handleValue = (Boolean) => {
         if (Boolean) return "PLAY";
         return "Start";
-      
     };
     
 
