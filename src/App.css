@@ -1,3 +1,21 @@
 .App {
   margin: 1rem 1rem;
+
+  
+}
+.nav1{
+
+  background: -webkit-linear-gradient(#ff008450,  #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%); 
+
+}
+.clickcolumn{
+  /* grid-template-columns: 10px auto auto auto; */
+
+}
+.todo-lish{
+  /* grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  display: grid;
+
+  grid-template-columns: 90px auto auto auto; */
 }
