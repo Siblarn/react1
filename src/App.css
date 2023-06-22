@@ -3,6 +3,11 @@
 
   
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .nav1{
 
   background: -webkit-linear-gradient(#ff008450,  #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%); 
