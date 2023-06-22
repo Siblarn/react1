@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import Navbar from "./component04/navbar";
+import Navbar from "./component04/Navbar";
 
 function App() {
   const preTodo = [{ id: 1, text: "Assign 4", createAt: Date.now() }];
@@ -28,12 +28,12 @@ function App() {
   }
   const [checked, setChecked] = useState(false);
   function handleChange(e, checkbox) {
-    setTodo(e.target.value);
-
-    // checkboxes.forEach((item) => {
-    //   item !== checkbox ? setChecked(false) : setChecked(true);
-    // });
+    setTodo(e.target.input);
   }
+  // checkboxes.forEach((item) => {
+  //   item !== checkbox ? setChecked(false) : setChecked(true);
+  // });
+
   // function handleFromSubmit() {
   //   if (todo !== "") {
   //     setTodo([
@@ -45,7 +45,7 @@ function App() {
   //     ]);
   //   }
   //   setInput("");
-  //   console.log("todo",todo);
+  //   console.log("todo", todo);
   // }
 
   // function handleDeleteClick(id) {
@@ -73,27 +73,25 @@ function App() {
   //   e.preventDefault();
   // }
 
-  // console.log(todos);
+  // const [isEditing, setIsEditing] = useState(false);
+  // const toggleFrom = (e) => {
+  //   setIsEditing(!isEditing);
+  // };
 
-  const [isEditing, setIsEditing] = useState(false);
-  const toggleFrom = (e) => {
-    setIsEditing(!isEditing);
-  };
-  
   return (
     <div className="App">
-      <Navbar/>
-
+      <Navbar />
       <input
         style={{
-          backgroundColor: "#efb2fb",
-          border: "3px solid #ff008450",
+          backgroundColor: "white",
+          border: "1.5px solid gray",
           width: "160px",
-          height: "25px",
+          height: "36px",
           borderRadius: "4px 4px 4px 4px",
-          marginLeft: "4rem",
+          marginLeft: "39rem",
         }}
         value={input}
+        class="btn"
         placeholder="New to do list."
         onChange={(e) => {
           setInput(e.target.value);
@@ -101,14 +99,8 @@ function App() {
       />
 
       <button
-        style={{
-          height: "26px",
-          backgroundColor: "#ff008450",
-          border: "3px solid #ff008450",
-          fontWeight: "500",
-          borderRadius: "4px 4px 4px 4px",
-          marginLeft: "3px",
-        }}
+        type="button"
+        class="btn btn-outline-secondary m-2"
         type="submit"
         onClick={() => {
           handleAdd();
@@ -117,36 +109,77 @@ function App() {
         Add
       </button>
 
-      {/* </from> */}
-      <ul className="todo-lish">
-        {todo &&
-          todo.map((todo, index) => (
-            <div key={todo.id}>
-              {todo.text}
+      <div class="container">
+        <div class="row">
+          <div class="col order-first ">
+            Column 1
+            <ul className="todo-lish ">
+              {todo &&
+                todo.map((todo, index) => (
+                  <div key={todo.id}>
+                    {todo.text}
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary ml-5"
+                    >
+                      EDIT
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary m-1"
+                      onClick={() => {
+                        handleDelete(todo.id);
+                      }}
+                    >
+                      DELETE
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary m-0.25"
+                    >
+                      <label key={todo}>
+                        <input type="checkbox" />
+                        <span className="checkbox">{"  "}</span>
+                      </label>
+                    </button>
 
-              <button
-                style={{
-                  backgroundColor: "#ff008450",
-                  border: "3.2px solid #b98cce",
-                  color: "red",
-                  fontWeight: "600",
-                  borderRadius: "7px 7px 7px 7px",
-                  marginLeft: "1rem",
-                }}
-                onClick={() => {
-                  handleDelete(todo.id);
-                }}
-              >
-                X
-              </button>
+                    <div
+                      class="btn-group m-2 "
+                      role="group"
+                      aria-label="Basic outlined example"
+                    ></div>
+                  </div>
+                ))}
+            </ul>
+          </div>
 
+          <div class="col">
+            <button type="button" class="btn btn-outline-secondary ml-5">
+              EDIT
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary m-1"
+              onClick={() => {
+                handleDelete(todo.id);
+              }}
+            >
+              DELETE
+            </button>
+            <button type="button" class="btn btn-outline-secondary m-0.25">
               <label key={todo}>
                 <input type="checkbox" />
-                <span className="check">{""}</span>
+                <span className="checkbox">{"  "}</span>
               </label>
-            </div>
-          ))}
-      </ul>
+            </button>
+            <div
+              class="btn-group m-2 "
+              role="group"
+              aria-label="Basic outlined example"
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

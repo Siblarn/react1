@@ -5,7 +5,7 @@ export default function Navbar(prop) {
   const text = prop.text || " ";
 
   return (
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light font-mono">
       <div class="container-fluid">
         <a class="navbar-brand">To Do List</a>
         <form class="d-flex">
