@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
+
 function App() {
   const preTodo = [{ id: 1, text: "Assign 4", createAt: Date.now() }];
   const [todo, setTodo] = useState(preTodo);
@@ -76,16 +77,8 @@ function App() {
   const toggleFrom = (e) => {
     setIsEditing(!isEditing);
   };
-  const handleClick = (todo) => {
-    remove(e.target.preTodo);
-    if (isEditing) {
-    } else {
-    }
-  };
- 
-
-
   
+
   return (
     <div className="App">
     
@@ -112,7 +105,7 @@ function App() {
               width: "160px",
               height: "16px",
               borderRadius: "4px 4px 4px 4px",
-              marginLeft: "10px",
+              marginLeft: "4rem",
             }}
             value={input}
             placeholder="New to do list."
@@ -151,6 +144,7 @@ function App() {
                         color: "red",
                         fontWeight: "800",
                         borderRadius: "7px 7px 7px 7px",
+                        marginLeft: "1rem",
                       }}
                       onClick={() => {
                         handleDelete(todo.id);
@@ -166,36 +160,10 @@ function App() {
                 ))}
             </ul>
           </div>
-          <div className="Todo">
-            <form className="Todo-edit-form" onSubmit={handleClick}>
-              <input
-                onChange={handleClick}
-                value={input}
-                placeholder="Edit to do list."
-                style={{
-                  backgroundColor: "#efb2fb",
-                  border: "3px solid #ff008450",
-                  width: "160px",
-                  height: "16px",
-                  borderRadius: "4px 4px 4px 4px",
-                  marginLeft: "10px",
-                }}
-              />
-              <button
-                style={{
-                  backgroundColor: "#ff008450",
-                  border: "3px solid #ff008450",
-                  fontWeight: "700",
-                  borderRadius: "4px 4px 4px 4px",
-                  marginLeft: "3px",
-                }}
-              >
-                Save
-              </button>
-            </form>
-          </div>
         </div>
-      </div>
+  
+    </div>
+      
   );
 }
 
