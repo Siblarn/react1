@@ -1,13 +1,10 @@
 .App {
   margin: 1rem 1rem;
-
   
 }
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .nav1{
 
   background: -webkit-linear-gradient(#ff008450,  #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%); 
@@ -23,4 +20,100 @@
   display: grid;
 
   grid-template-columns: 90px auto auto auto; */
+}
+
+:root {
+	--dur: 0.3s;
+	font-size: calc(24px + (10 - 10)*(20px - 20px)/(1080 - 300));
+}
+body, input {
+	color: hsl(0,0%,1%);
+	font: 10rem/1.5 sans-serif;
+  
+}
+form, .toggle:before, .toggle:after {
+	background: hsl(0,0%,100%);
+}
+form, .toggle {
+	position: relative;
+}
+form {
+
+	justify-content:center;
+	align-items: center	;
+	height: 1.8rem;
+}
+.darklight, .sr, .toggle:before, .toggle:after {
+	position: absolute;
+}
+.darklight, .toggle:before, .toggle:after {
+	transition: transform var(--dur);
+}
+.darklight, .toggle:before, .toggle:checked:after  {
+	transition-timing-function: ease-out;
+}
+.darklight, .sr {
+	top: 0;
+	left: 0;
+}
+
+.darklight {
+	background: hsl(0,0%,94%);
+	mix-blend-mode: difference;
+	pointer-events: none;
+	width: 100%;
+	height: 50rem;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+}
+.sr, .toggle {
+	overflow: hidden;
+}
+.sr {
+	clip: rect(1px,1px,1px,1px);
+	color: transparent;
+	width: 8rem;
+	height: 8rem;
+}
+.toggle {
+	background: currentColor;
+	border-radius: 22px;
+	cursor: pointer;
+	width: 3rem;
+	height: 1.5rem;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+
+}
+.toggle:before, .toggle:after {
+	border-radius: 50%;
+	content: "";
+	display: block;
+	top: 0.25em;
+	left: 0.25em;
+	width: 1em;
+	height: 1em;
+}
+.toggle:before, .toggle:checked:after {
+	transition-delay: 0s;
+}
+.toggle:checked:before, .toggle:after {
+	transition-delay: calc(var(--dur) * 0.75);
+	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
+}
+.toggle:before {
+	transform: translateX(-1.5em);
+}
+.toggle:checked:before {
+	transform: translateX(1.5em);
+}
+.toggle:checked:after {
+	transform: translateX(3em);
+}
+.toggle:checked ~ .darklight {
+	transform: scaleX(1);
+}
+.toggle:focus {
+	outline: transparent;
 }
