@@ -21,7 +21,7 @@ function App() {
               <Route path="/Resume" element={<Resume />} />
               <Route index element={<div>Hello Pasapit</div>} />
               <Route path="/Todolist" element={<Button name="test" />} />
-              <Route path="10M" element={<Testgame name="tictac"/>} />
+              <Route path="10M" element={<Testgame />} />
             </Route>
         
         </Routes>

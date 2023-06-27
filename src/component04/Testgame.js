@@ -4,6 +4,9 @@ export default function Titactoe(prop) {
   const toggle = (bool) => {
     return !bool;
   };
+  const Start01 = (Boolean) => {
+    return !Boolean;
+  };
   function refreshPage() {
     window.location.reload(false);
   }
@@ -19,6 +22,7 @@ export default function Titactoe(prop) {
     c2: " ",
     c3: " ",
   });
+
   const [a1, setA1] = useState(value.a1);
   const [a2, setA2] = useState(value.a2);
   const [a3, setA3] = useState(value.a3);
@@ -59,21 +63,13 @@ export default function Titactoe(prop) {
   }, [a1]);
 
   const handleCheckwina1 = () => {
-    const arr = [a1, a2, a3]; //c1 c3
+    const arr = [a1, a2, a3];
     const concat_arr = arr.join("");
     console.log("concat_arr ", concat_arr);
-    if (checkIsTheSame(concat_arr)) {
+    if (concat_arr == "xxx") {
       console.log("winer work");
       alert(`THE WINER IS ${a1}`);
     }
-    // [a1,b2,c3] [a3,b2,c1] || ooo xxx
-  };
-
-  const checkIsTheSame = (str) => {
-    if (str == ("xxx" || "ooo")) {
-      return true;
-    }
-    return false;
   };
   const handleCheckwina2 = () => {
     const arr = [a1, b2, c3];
@@ -157,17 +153,6 @@ export default function Titactoe(prop) {
     }
   };
 
-  const cardTicTacStyle = {
-    width: "170px",
-    height: "170px",
-    backgroundColor: "gray",
-    justifyContent: "center",
-    alignItems: "center",
-    display: "flex",
-    border: "25px solid pink",
-    cursor: "pointer",
-  };
-
   useEffect(() => {
     console.log("effect work.");
     console.log(value);
@@ -233,76 +218,78 @@ export default function Titactoe(prop) {
       >
         Play Again!
       </button>
-      <div style={{ marginLeft: "25rem" }}></div>
-      <div style={{ display: "flex" }}>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.a1 = handleToggleXO(value.a1);
-            setValue(preValue);
-            setA1(value.a1);
-            console.log(preValue);
-            setA1(handleToggleXO(a1));
-          }}
-        >
-          <Testgame value={a1} state={state} />
+
+      <div style={{ marginLeft: "25rem" }}>
+        <div style={{ display: "flex" }}>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.a1 = handleToggleXO(value.a1);
+              setValue(preValue);
+              setA1(value.a1);
+              console.log(preValue);
+              setA1(handleToggleXO(a1));
+            }}
+          >
+            <Testgame value={a1} state={state} />
+          </div>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.a2 = handleToggleXO(value.a2);
+              setValue(preValue);
+              console.log(preValue);
+              setA2(handleToggleXO(a2));
+            }}
+          >
+            <Testgame value={value.a2} state={state} />
+          </div>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.a3 = handleToggleXO(value.a3);
+              setValue(preValue);
+              console.log(preValue);
+              setA2(handleToggleXO(a3));
+            }}
+          >
+            <Testgame value={value.a3} state={state} />
+          </div>
         </div>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.a2 = handleToggleXO(value.a2);
-            setValue(preValue);
-            console.log(preValue);
-            setA2(handleToggleXO(a2));
-          }}
-        >
-          <Testgame value={value.a2} state={state} />
-        </div>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.a3 = handleToggleXO(value.a3);
-            setValue(preValue);
-            console.log(preValue);
-            setA2(handleToggleXO(a3));
-          }}
-        >
-          <Testgame value={value.a3} state={state} />
-        </div>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.b1 = handleToggleXO(value.b1);
-            setValue(preValue);
-            console.log(preValue);
-            setB1(handleToggleXO(b1));
-          }}
-        >
-          <Testgame value={value.b1} state={state} />
-        </div>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.b2 = handleToggleXO(value.b2);
-            setValue(preValue);
-            console.log(preValue);
-            setB2(handleToggleXO(b2));
-          }}
-        >
-          <Testgame value={value.b2} state={state} />
-        </div>
-        <div
-          onClick={() => {
-            const preValue = value;
-            value.b3 = handleToggleXO(value.b3);
-            setValue(preValue);
-            console.log(preValue);
-            setB3(handleToggleXO(b3));
-          }}
-        >
-          <Testgame value={value.b3} state={state} />
+        <div style={{ display: "flex" }}>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.b1 = handleToggleXO(value.b1);
+              setValue(preValue);
+              console.log(preValue);
+              setB1(handleToggleXO(b1));
+            }}
+          >
+            <Testgame value={value.b1} state={state} />
+          </div>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.b2 = handleToggleXO(value.b2);
+              setValue(preValue);
+              console.log(preValue);
+              setB2(handleToggleXO(b2));
+            }}
+          >
+            <Testgame value={value.b2} state={state} />
+          </div>
+          <div
+            onClick={() => {
+              const preValue = value;
+              value.b3 = handleToggleXO(value.b3);
+              setValue(preValue);
+              console.log(preValue);
+              setB3(handleToggleXO(b3));
+            }}
+          >
+            <Testgame value={value.b3} state={state} />
+          </div>
         </div>
         <div style={{ display: "flex" }}>
           <div
