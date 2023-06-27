@@ -9,7 +9,7 @@ export default function Navbar(prop) {
       
     <nav class="navbar navbar-light bg-light font-mono">
       <div class="container-fluid">
-        <a class="navbar-brand">To Do List</a>
+        <a class="navbar-brand">My project</a>
         <form class="d-flex">
           <input
             class="form-control me-2"
