@@ -8,22 +8,22 @@ import Navbar from "./component04/Navbar";
 import Layout from "./component04/Routertest";
 import Button from "./component04/Button";
 import Resume from "./component04/Resume";
-
+import Testgame from "./component04/Testgame";
 
 function App() {
-
   return (
     <div className="App">
-    <Navbar/>
+      <Navbar />
       <BrowserRouter>
         <Routes>
-
-          <Route path="/" element={<Layout  />}>
-            <Route path="/Resume" element={<Resume/>}/>
-            <Route index element={<div>Hello Pasapit</div>} />
-            <Route path="/blogs" element={<Button name="test"/>} />
-            {/* <Route path="10M" element={<TicTacToe/>} /> */}
-          </Route>
+   
+            <Route path="/" element={<Layout />}>
+              <Route path="/Resume" element={<Resume />} />
+              <Route index element={<div>Hello Pasapit</div>} />
+              <Route path="/Todolist" element={<Button name="test" />} />
+              <Route path="10M" element={<Testgame name="tictac"/>} />
+            </Route>
+        
         </Routes>
       </BrowserRouter>
     </div>
