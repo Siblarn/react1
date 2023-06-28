@@ -45,7 +45,7 @@ export default function Button(prop) {
   return (
     <>
        <form>
-        <nav class="navbar avbar-light bg-light font-mono">
+        {/* <nav class="navbar avbar-light bg-light font-mono">
           <div class="container-fluid">
             <a class="navbar-brand mx-6 font-black italic shadow-sm">
               To Do List
@@ -62,7 +62,7 @@ export default function Button(prop) {
               </button>
             </form>
           </div>
-        </nav>
+        </nav> */}
         <input
           id="dark-mode"
           className="toggle"
@@ -82,7 +82,7 @@ export default function Button(prop) {
             width: "25rem",
             height: "55px",
             borderRadius: "4px 4px 4px 4px",
-            marginLeft: "20rem",
+            marginLeft: "14rem",
           }}
           value={input}
           class="btn"
@@ -101,20 +101,6 @@ export default function Button(prop) {
           >
           Add
         </button>
-        <form
-          className="form-floating "
-          style={{ height: "120px", width: "18rem", marginLeft: "28rem" }}
-        >
-          <input
-            type="To do list."
-            className="form-control is-invalid"
-            id="todo"
-            placeholder="todo"
-            defaultValue="กรอกข้อความมากกว่า 1 ตัวอักษร  "
-            />
-          <label>-หมายเหตุ-</label>
-        </form>
-
         <div>
           <input
             type="text"
