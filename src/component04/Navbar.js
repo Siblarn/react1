@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import Login from "./Login";
 
 export default function Navbar(prop) {
   const text = prop.text || " ";
@@ -28,26 +29,80 @@ export default function Navbar(prop) {
           </div>
           <form class="d-flex">
             <input
-              class="form-control me-2"
+              class="form-control"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-primary mx-1">Search</button>
-            <li class="btn btn-dark mx-1">
-              <label className="dropdown">
-                <div className="dd-button btn btn-dark">
-                  <Link to="/Login">Login</Link>
+            <button class="btn btn-primary mx-2">Search</button>
+
+            <label
+              className="dropdown "
+              style={{ marginRight: "8rem", marginLeft: "8rem" }}
+            >
+              <div className="dd-button btn btn-dark">
+                <Link to="/Login">Login</Link>
+              </div>
+              <input type="checkbox" className="dd-input" id="test" />
+              <ul className="dd-menu">
+                <form className="px-4 py-3">
+                  <div className="form-group">
+                    <label htmlFor="exampleDropdownFormEmail1">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="exampleDropdownFormEmail1"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="exampleDropdownFormPassword1">
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="exampleDropdownFormPassword1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="form-check">
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      id="dropdownCheck"
+                    />
+                    <label className="form-check-label" htmlFor="dropdownCheck">
+                      Remember me
+                    </label>
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Sign in
+                  </button>
+                </form>
+
+                <a className="dropdown-item" href="#">
+                  <br></br> <br></br>
+                </a>
+                <li style={{ color: "black" }}>
+                  <a className="dropdown-item" href="#">
+                    Forgot password?
+                  </a>
+                </li>
+                <li style={{ color: "black" }}>Log Out</li>
+                <div style={{marginLeft:"20px"}}>
+                <Link to="/Regis">Register</Link>
                 </div>
-                <input type="checkbox" className="dd-input" id="test" />
-                <ul className="dd-menu">
-                  <li style={{ color: "black" }}>Register</li>
-                  <li style={{ color: "black" }}>Log Out</li>
-                  <li style={{ color: "black" }}>Contact</li>
-                  <li className="divider"></li>
-                </ul>
-              </label>
-            </li>
+                <li style={{ color: "White" ,borderBottom:"1px solid gray" }}>
+                  <a className="dropdown-item" href="#">
+                    --------------------------
+                  </a>
+                </li>
+                <li className="divider"></li>
+              </ul>
+            </label>
           </form>
         </div>
       </nav>

@@ -1,4 +1,5 @@
-import React from "react";
+
+import { Outlet,Link } from "react-router-dom";
 
 export default function Login(){
     return(
@@ -9,16 +10,17 @@ export default function Login(){
         <span></span>
         <div className="but">
           <div id="in">
-            <a href="login.html">
+            <a href="Myproject">
+
               <h1 id="inh1">
-                L<div className="ins">O</div>G <div className="ins">IN</div>
+                W<div className="ins">E</div>L <div className="ins">COM</div>
               </h1>
             </a>
           </div>
           <div id="up">
-            <a href="signup.html">
+            <a href="MENU">
               <h1 id="uph1">
-                SI<div className="ups">G</div>N <div className="ups">UP</div>
+                PR<div className="ups">O</div>JE <div className="ups">CT</div>
               </h1>
             </a>
           </div>
