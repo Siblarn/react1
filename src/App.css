@@ -229,7 +229,7 @@ form {
         #uph1 {
             color: #ad3a3a;
             font-family: 'Raleway';
-            font-size: 64px;
+            font-size: 54px;
             letter-spacing: 10px;
             animation: uph1-flicker 3s linear infinite;
         }
@@ -374,7 +374,7 @@ form {
         #inh1 {
             color: #605ee9;
             font-family: 'Raleway';
-            font-size: 64px;
+            font-size: 52px;
             letter-spacing: 10px;
             animation: inh1-flicker 3s linear infinite;
         }
@@ -627,3 +627,53 @@ form {
             border-bottom: 1px solid #cccccc;
           }
         
+          .form{
+    background-color: white;
+    border-radius: 5px;
+    width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    /* height: 600px; */
+}
+
+.form-body{
+    text-align: left;
+    padding: 20px 10px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 40%;
+}
+
+.form_input{
+    width: 60%;
+}
+
+.footer{
+    text-align: center;
+}
+
+.app{
+width: 70%;
+text-align: center;
+}
+
+.app input{
+border: 0.5px solid #ccc;
+}
+.progress-container{
+height: 10px;
+margin-top:10px;
+border-radius:5px;
+border: 1px solid #ccc;
+}
+.progress-container .progress-bar{
+height: 100%;
+max-width:100%;
+border-radius:5px;
+
+}
