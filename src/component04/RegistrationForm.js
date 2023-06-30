@@ -4,6 +4,12 @@ import { hasSpecialCharacters } from "./utils";
 import { hasNumber } from "./utils";
 import { hasUpperCase } from "./utils";
 import { hasLowerCase } from "./utils";
+import {
+  Link,
+  Routes,
+  Route,
+  useNavigate,
+} from 'react-router-dom';
 
 
 function RegistrationForm() {
@@ -11,6 +17,7 @@ function RegistrationForm() {
   const [lastName, setLastName] = useState(null);
   const [email, setEmail] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -32,7 +39,8 @@ function RegistrationForm() {
   };
 
   const handleSubmit = () => {
-    console.log(firstName, lastName, email, password, confirmPassword);
+    console.log(firstName, lastName, email, );
+    alert ("Complete");
   };
   const [password, setPassword] = useState("");
   const [strength, setStrength] = useState(0);
@@ -166,7 +174,7 @@ function RegistrationForm() {
             placeholder="Password"
           /> */}
           {/* <h1>Password strength Checker</h1> */}
-          <input type="text" placeholder="Password" value={password} onChange={handlePasswordChange} />
+          <input type="text" placeholder="Password" value={password} onChange={handlePasswordChange}/>
           <div className="progress-container" >
             <div className="progress-bar" style={{ ...progressBarStyles }} />
             {/* <div className="porgress-bar" style={{ ...progressBarStyles }}>123123</div> */}
@@ -188,10 +196,11 @@ function RegistrationForm() {
           />
         </div> */}
       </div>
-      <div class="footer">
-        {/* <button onClick={() => handleSubmit()} type="submit" class="btn">
+      <div className="footer">
+        <button onClick={() => handleSubmit()} type="submit"  className="dd-button btn btn-dark">
           Register
-        </button> */}
+        </button>
+        <button onClick={() => navigate(-1)} class="btn btn-primary mx-2">Back to Home Page</button>
       </div>
     </div>
   );

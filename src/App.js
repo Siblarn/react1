@@ -10,12 +10,13 @@ import Resume from "./component04/Resume";
 import Tictac from "./component04/Tictac";
 import Login from "./component04/Login";
 import RegistrationForm from "./component04/RegistrationForm";
-import{
+import {
   hasSpecialCharacters,
   hasLowerCase,
   hasNumber,
   hasUpperCase,
-} from './component04/utils';
+} from "./component04/utils";
+import Testdummy from "./component04/Testdummy"
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
             <Route index element={<div>Hello Pasapit</div>} />
             <Route path="/Todolist" element={<Button name="test" />} />
             <Route path="TicTac" element={<Tictac />} />
-            <Route path="/Login" element={<Login/>}/>
-            <Route path="/Regis" element={<RegistrationForm/>}/>
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Regis" element={<RegistrationForm />} />
+            <Route path="/test" element={<Testdummy/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
