@@ -200,7 +200,7 @@ function RegistrationForm() {
         <button onClick={() => handleSubmit()} type="submit"  className="dd-button btn btn-dark">
           Register
         </button>
-        <button onClick={() => navigate(-1)} class="btn btn-primary mx-2">Back to Home Page</button>
+        <button onClick={() => navigate(-1)} class="btn btn-primary mx-3">Back to Home Page</button>
       </div>
     </div>
   );

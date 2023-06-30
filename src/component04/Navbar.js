@@ -14,18 +14,21 @@ export default function Navbar(prop) {
           >
             <a class="navbar-brand">My project</a>
             <li style={{ margin: "0px" }}>
-              <button class="btn btn-outline-dark mx-0.5">
+              <button class="btn btn-outline-primary mx-0.5">
                 <Link to="/Resume">Resume</Link>
               </button>
             </li>
             <li style={{ margin: "0px" }}>
-              <button class="btn btn-outline-dark mx-1">
+              <button class="btn btn-outline-primary mx-1">
                 <Link to="/Todolist">Todolist</Link>
               </button>
             </li>
-            <li class="btn btn-outline-dark mx-0.5">
+            <li class="btn btn-outline-primary mx-0.5">
               <Link to="/TicTac">TicTac</Link>
             </li>
+          </div>
+          <div className="btn btn-outline-primary mx-0.5">
+            <Link to="/test">DummyJSON</Link>
           </div>
           <form class="d-flex">
             <input
@@ -38,9 +41,9 @@ export default function Navbar(prop) {
 
             <label
               className="dropdown "
-              style={{ marginRight: "8rem", marginLeft: "8rem" }}
+              style={{ marginRight: "8rem", marginLeft: "6rem" }}
             >
-              <div className="dd-button btn btn-dark">
+              <div className="btn btn-outline-primary">
                 <Link to="/Login">Login</Link>
               </div>
               <input type="checkbox" className="dd-input" id="test" />
@@ -92,10 +95,10 @@ export default function Navbar(prop) {
                   </a>
                 </li>
                 <li style={{ color: "black" }}>Log Out</li>
-                <div style={{marginLeft:"20px"}}>
-                <Link to="/Regis">Register</Link>
+                <div style={{ marginLeft: "20px" }}>
+                  <Link to="/Regis">Register</Link>
                 </div>
-                <li style={{ color: "White" ,borderBottom:"1px solid gray" }}>
+                <li style={{ color: "White", borderBottom: "1px solid gray" }}>
                   <a className="dropdown-item" href="#">
                     --------------------------
                   </a>

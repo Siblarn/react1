@@ -5,7 +5,7 @@ export default function Resume() {
     return (
 
     <>
-    <div className="header" style={{ margin: '30px' }}>
+    <div className="header .overflow-y-visible" style={{ margin: '30px' }}>
 
     <div style={{ display: 'flex' }}>
         <div className="MyImage" style={{ margin: '30px' }} ></div>
