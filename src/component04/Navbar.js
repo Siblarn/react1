@@ -47,7 +47,7 @@ export default function Navbar(prop) {
                 <Link to="/Login">Login</Link>
               </div>
               <input type="checkbox" className="dd-input" id="test" />
-              <ul className="dd-menu">
+              <ul className="dd-menu" >
                 <form className="px-4 py-3">
                   <div className="form-group">
                     <label htmlFor="exampleDropdownFormEmail1">
@@ -94,6 +94,7 @@ export default function Navbar(prop) {
                     Forgot password?
                   </a>
                 </li>
+                
                 <li style={{ color: "black" }}>Log Out</li>
                 <div style={{ marginLeft: "20px" }}>
                   <Link to="/Regis">Register</Link>
