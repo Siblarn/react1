@@ -901,3 +901,12 @@ body {
 		box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 6px rgba(203, 34, 237, .2);
 	}
 }
+
+
+//Password Login
+.valid{
+color: green;
+}
+.invalid{
+color: red;
+}

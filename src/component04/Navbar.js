@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Login from "./Login";
+import PWDRequisite from "./PWDRequisite";
 
 export default function Navbar(prop) {
   const text = prop.text || " ";
-
+  const [loginpassword, setLoginpasswords] = useState("");
+  const [pwdRequisite, setPWDRequisite] = useState(false);
+  const [checks, setChecks] = useState({
+    capsLetterCheck: false,
+    numberCheck: false,
+    pwdLengthCheck: false,
+    specialCharCheck: false,
+  });
+  const handleOnChange = (e) => {
+    console.log(e.target.value);
+    setLoginpasswords(e.target.value);
+  };
+  const handleOnFocus = () => {
+    setPWDRequisite(true);
+  };
+  const handleOnBlur = () => {
+    setPWDRequisite(false);
+  };
+  const handleOnKeyUp = (e) => {
+    console.log(e);
+    const { value } = e.target;
+    const capsLetterCheck = /[A-Z]/.test(value);
+    const numberCheck = /[0-9]/.test(value);
+    const pwdLengthCheck = value.target > 8;
+    const specialCharCheck = /[!@#$%^&*]/.test(value);
+    setChecks({
+      capsLetterCheck,
+      numberCheck,
+      pwdLengthCheck,
+      specialCharCheck,
+    });
+  };
   return (
     <div className="">
       <nav class="navbar navbar-light bg-light font-mono">
@@ -47,7 +79,7 @@ export default function Navbar(prop) {
                 <Link to="/Login">Login</Link>
               </div>
               <input type="checkbox" className="dd-input" id="test" />
-              <ul className="dd-menu" >
+              <ul className="dd-menu">
                 <form className="px-4 py-3">
                   <div className="form-group">
                     <label htmlFor="exampleDropdownFormEmail1">
@@ -60,16 +92,36 @@ export default function Navbar(prop) {
                       placeholder="email@example.com"
                     />
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="exampleDropdownFormPassword1">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="exampleDropdownFormPassword1"
-                      placeholder="Password"
-                    />
+
+                  <div>
+                    <div className="form-group">
+                      <label htmlFor="loginpassword">Password</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="loginpassword"
+                        value={loginpassword}
+                        onChange={handleOnChange}
+                        onFocus={handleOnFocus}
+                        onBlur={handleOnBlur}
+                        onKeyUp={handleOnKeyUp}
+                        placeholder="Password"
+                      />
+                      </div>
+                    {pwdRequisite ? (
+                      <PWDRequisite
+                      capsLetterFlag={
+                        checks.capsLetterCheck ? "valid" : "invalid"
+                      }
+                      numberFlag={checks.numberCheck ? "valid" : "invalid"}
+                      pwdLengthFlag={
+                        checks.pwdLengthCheck ? "valid" : "invalid"
+                      }
+                      specialCharFlag={
+                        checks.specialCharCheck ? "valid" : "invalid"
+                      }
+                      />
+                      ) : null}
                   </div>
                   <div className="form-check">
                     <input
@@ -94,7 +146,7 @@ export default function Navbar(prop) {
                     Forgot password?
                   </a>
                 </li>
-                
+
                 <li style={{ color: "black" }}>Log Out</li>
                 <div style={{ marginLeft: "20px" }}>
                   <Link to="/Regis">Register</Link>
