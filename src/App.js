@@ -17,6 +17,7 @@ import {
   hasUpperCase,
 } from "./component04/utils";
 import Testdummy from "./component04/Testdummy"
+import Testapi from "./component04/Testapi";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Regis" element={<RegistrationForm />} />
             <Route path="/test" element={<Testdummy/>}/>
+            <Route path="/test" element={<Testapi/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
