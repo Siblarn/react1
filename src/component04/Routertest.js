@@ -7,6 +7,9 @@ const Layout = () => {
       <nav>
         <ul>
           <Navbar />
+          <div className="btn btn-outline-primary mx-0.5">
+            <Link to="/testapi">ลองยิงมะม่วง</Link>
+          </div>
         </ul>
       </nav>
       <Outlet />
