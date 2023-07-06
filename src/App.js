@@ -16,13 +16,13 @@ import {
   hasNumber,
   hasUpperCase,
 } from "./component04/utils";
-import Newregister from "./New Login/Newregister"
-import Newlogin from "./New Login/Newlogin"
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/Resume" element={<Resume />} />
@@ -31,9 +31,7 @@ function App() {
             <Route path="TicTac" element={<Tictac />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Regis" element={<RegistrationForm />} />
-            <Route path="/newregis" element={<Newregister/>}/>
-            <Route path="newlogin" element={<Newlogin/>}/>
-  
+            
           </Route>
         </Routes>
       </BrowserRouter>

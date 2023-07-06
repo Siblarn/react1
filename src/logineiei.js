@@ -1,15 +1,13 @@
 import { useState } from "react";
 import withReactContent, { SweetAlert2 } from "sweetalert2-react-content";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-function logingeiei() {
-  
-  const navigate = useNavigate();
-
-  const MySwal = withReactContent(Swal);
-
-  const [inputs, setInputs] = useState("");
+export default function Logineiei() {
+  const MySwal = withReactContent(Swal)
+  const [inputs, setInputs] = useState({});
+  const [result,setResult] = useState({});
+  const navigate = useNavigate()
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -25,7 +23,6 @@ function logingeiei() {
     var raw = JSON.stringify({
       "username" : inputs.username,
       "password" : inputs.password,
-      "expiresIN": 60000
     })
     
 
@@ -36,28 +33,29 @@ function logingeiei() {
       redirect: "follow",
     };
 
-    fetch(" https://www.melivecode.com/api/login", requestOptions)
+    fetch("http://61.7.237.18:1150/auth/login", requestOptions)
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
     console.log(inputs);
     if (result.status === "ok") {
       MySwal.fire({
-        html: <i>{result.amessage}</i>,
+        html: <i>{result.message}</i>,
         icon: "success",
       }).then((value) => {
+        localStorage.setItem("token",result.accessToken)
         navigate('/')
       })
     } else {
       MySwal.fire({
-        html: <i>{result.amessage}</i>,
-        icon: "ERROR",
+        html: <i>{result.message}</i>,
+        icon: "error",
       });
     }
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label class="btn btn-outline-dark mx-1">
         Username:
         <input
           type="text"
@@ -66,16 +64,16 @@ function logingeiei() {
           onChange={handleChange}
         />
       </label>
-      <label>
+      <label class="btn btn-outline-dark mx-1">
         Password:
         <input
           type="password"
-          name="[password]"
+          name="password"
           value={inputs.password || ""}
           onChange={handleChange}
         />
       </label>
-      <input type="submit" />
+      <input  class="btn btn-outline-success mx-1" type="submit" />
     </form>
   );
 }
