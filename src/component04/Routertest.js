@@ -10,6 +10,7 @@ const Layout = () => {
           <div className="btn btn-outline-primary mx-0.5">
             <Link to="/testapi">ลองยิงมะม่วง</Link>
           </div>
+          <Link to = "/NewRegister">TestRegister</Link>
         </ul>
       </nav>
       <Outlet />
