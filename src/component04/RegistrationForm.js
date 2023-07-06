@@ -10,6 +10,7 @@ import {
   Route,
   useNavigate,
 } from 'react-router-dom';
+import { render } from "@testing-library/react";
 
 
 function RegistrationForm() {
@@ -38,10 +39,6 @@ function RegistrationForm() {
     // }
   };
 
-  const handleSubmit = () => {
-    console.log(firstName, lastName, email, );
-    alert ("Complete");
-  };
   const [password, setPassword] = useState("");
   const [strength, setStrength] = useState(0);
   const [progressBarStyles, setProgressBarStyles] = useState({
@@ -56,26 +53,26 @@ function RegistrationForm() {
   };
   useEffect(() => {
    
-      //colculate strength
-      //calculate progress bar styles based on strength
-      
-      // strenth = length + characterType
+    //colculate strength
+    //calculate progress bar styles based on strength
+    
+    // strenth = length + characterType
       // total strength 10
       // 'A@al'
       // 0=>1 =>2 =>3 =>4(max)
-    // max strength by tength = 10-4 =>6
-    //"asasasasasas => 6"
-    //"abcdefghi =>6"
-    // min(6,(9/3))
-    // min(6,3);
-    //3
+      // max strength by tength = 10-4 =>6
+      //"asasasasasas => 6"
+      //"abcdefghi =>6"
+      // min(6,(9/3))
+      // min(6,3);
+      //3
     //A@al =>6
     //min(6,floor(4/3))
     //min(6,1)
     //1+4 => 5
     const updatedProgressBarStyles = {
-        backgroundColor:'red',
-        // background_color:'red'
+      backgroundColor:'red',
+      // background_color:'red'
     }
     let totalStrength = 0;
     if (password.length > 3) {
@@ -105,15 +102,32 @@ function RegistrationForm() {
         updatedProgressBarStyles.backgroundColor = "green";
     } else if (totalStrength > 6){
         updatedProgressBarStyles.backgroundColor = "orange";
-        
     }
     setStrength(totalStrength);
     setProgressBarStyles(updatedProgressBarStyles);
     console.log(updatedProgressBarStyles);
     console.log(progressBarStyles);
   }, [password]);
+  
+  const handleSubmit = () => {
+    fetch(' http://61.7.237.18:1150/user/new', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(password)
+  })
+    .then(response => response.json())
+    .then(password => {
+      console.log('Response:', password);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+      };
 
   return (
+    
     <div className="form">
       <nav class="bg-dark navbar-dark navbar">
         <div className="row col-12 d-flex justify-content-center text-white">
@@ -198,12 +212,13 @@ function RegistrationForm() {
       </div>
       <div className="footer">
         <button onClick={() => handleSubmit()} type="submit"  className="dd-button btn btn-dark">
-          Register
+          Submit
         </button>
         <button onClick={() => navigate(-1)} class="btn btn-primary mx-3">Back to Home Page</button>
       </div>
     </div>
   );
 }
+
 
 export default RegistrationForm;
