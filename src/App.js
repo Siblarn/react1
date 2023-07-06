@@ -16,9 +16,8 @@ import {
   hasNumber,
   hasUpperCase,
 } from "./component04/utils";
-import Newregister from "./New Login/Newregister";
-// import Testdummy from "./component04/Testdummy"
-// import Testapi from "./component04/Testapi";
+import Newregister from "./New Login/Newregister"
+import Newlogin from "./New Login/Newlogin"
 
 function App() {
   return (
@@ -32,9 +31,9 @@ function App() {
             <Route path="TicTac" element={<Tictac />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Regis" element={<RegistrationForm />} />
-            {/* <Route path="/test" element={<Testdummy/>}/> */}
-            {/* <Route path="/test" element={<Testapi/>}/> */}
-            <Route path="/NewRegister" element={<Newregister/>}/>
+            <Route path="/newregis" element={<Newregister/>}/>
+            <Route path="newlogin" element={<Newlogin/>}/>
+  
           </Route>
         </Routes>
       </BrowserRouter>
