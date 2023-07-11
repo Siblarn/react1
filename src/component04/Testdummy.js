@@ -20,7 +20,7 @@ export default function Testdummy() {
 
   return (
     <div className="flex">
-      {/* <div>{JSON.stringify(Testdummy)}</div> */}
+      <div>{JSON.stringify(Testdummy)}</div>
       {Testdummy.length > 0 &&
         Testdummy.map((item: any) => (
           <div
