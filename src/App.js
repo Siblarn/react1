@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/Resume" element={<Resume />} />
-            <Route index element={<div>Hello Pasapit</div>} />
+            <Route index element={<div></div>} />
             <Route path="/Todolist" element={<Button name="test" />} />
             <Route path="TicTac" element={<Tictac />} />
             <Route path="/Login" element={<Login />} />

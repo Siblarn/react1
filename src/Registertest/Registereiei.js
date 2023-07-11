@@ -1,10 +1,14 @@
 import { useState } from "react";
-import ReactDOM from "react-dom//client";
+import { ReactDOM } from "react";
+import withReactContent, { SweetAlert2 } from "sweetalert2-react-content";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-import withReactContent from "sweetalert2-react-content";
+import { json, useNavigate } from "react-router-dom";
+
+
+
 function Registereiei() {
   const [inputs, setInputs] = useState({});
+  const MySwal = withReactContent(Swal)
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -49,7 +53,7 @@ function Registereiei() {
       redirect: "follow",
     };
 
-    fetch("http://61.7.237.18:1150/user/new", requestOptions)
+    fetch("http://61.7.237.18:1150/user/new")
       .then((response) => response.json())
       .then((result) => {
         if (result.status === "ok") {
@@ -66,12 +70,13 @@ function Registereiei() {
           });
         }
         console.log(result);
+        
       })
       .catch((error) => console.log("error", error));
   };
 
-  return <div>RegisterTest</div>;
-  <form onSubmit={handleSubmit}>
+  return (
+    <form onSubmit={handleSubmit}>
     <label>
       Username :
       <input
@@ -79,7 +84,7 @@ function Registereiei() {
         name="username"
         value={inputs.username || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       Password :
@@ -88,7 +93,7 @@ function Registereiei() {
         name="password"
         value={inputs.password || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       FirstName :
@@ -97,7 +102,7 @@ function Registereiei() {
         name="fname"
         value={inputs.fname || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       LastName :
@@ -106,7 +111,7 @@ function Registereiei() {
         name="lname"
         value={inputs.lname || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       Gender :
@@ -115,7 +120,7 @@ function Registereiei() {
         name="gender"
         value={inputs.gender || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       BirthDate :
@@ -124,7 +129,7 @@ function Registereiei() {
         name="birthDate"
         value={inputs.birthDate || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       ImageUrl :
@@ -133,7 +138,7 @@ function Registereiei() {
         name="imageUrl"
         value={inputs.imageUrl || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       PhoneCode :
@@ -142,7 +147,7 @@ function Registereiei() {
         name="phoneCode"
         value={inputs.phoneCode || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       PhoneNumber :
@@ -151,7 +156,7 @@ function Registereiei() {
         name="phoneNumber"
         value={inputs.phoneNumber || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       Language :
@@ -160,7 +165,7 @@ function Registereiei() {
         name="language"
         value={inputs.language || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       News_modal :
@@ -169,7 +174,7 @@ function Registereiei() {
         name="news_modal"
         value={inputs.news_modal || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       UserRoles :
@@ -178,7 +183,7 @@ function Registereiei() {
         name="userRoles"
         value={inputs.userRoles || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       IsVerified :
@@ -187,7 +192,7 @@ function Registereiei() {
         name="isVerified"
         value={inputs.isVerified || ""}
         onChange={handleChange}
-      />
+        />
     </label>
     <label>
       Email :
@@ -196,8 +201,10 @@ function Registereiei() {
         name="email"
         value={inputs.email || ""}
         onChange={handleChange}
-      />
+        />
     </label>
-  </form>;
+    <input type="submit"/>
+  </form>
+);
 }
 export default Registereiei;
