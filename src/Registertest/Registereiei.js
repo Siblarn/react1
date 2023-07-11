@@ -53,7 +53,7 @@ function Registereiei() {
       redirect: "follow",
     };
 
-    fetch("http://61.7.237.18:1150/user/new")
+    fetch("http://61.7.237.18:1150/user/new", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.status === "ok") {
