@@ -13,6 +13,9 @@ export default function Logineiei() {
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
+    if (!value.match(/^([a-z0-9A-Z])+$/i)){
+      alert("กรอกได้เฉพาะตัวเลขและตัวอักษรภาษาอังกฤษเท่านั้น");
+    }
   };
 
   const handleSubmit = (event) => {
