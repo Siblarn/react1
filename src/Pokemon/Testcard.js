@@ -1,10 +1,12 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 export default function Testcard() {
   return (
     <div>
       Pokemon
-      <div className="container text-center">
+    
+      <div className="container text-center" >
         <div
           class="row align-items-start"
           style={{
@@ -118,6 +120,64 @@ export default function Testcard() {
             <div className="speed9">40</div>
             <div className="speed10">65</div>
           </div>
+        </div>
+      </div>
+      <br></br>
+      <div>SKILL
+        <div>
+        <div className="container text-center" >
+        <div
+          class="row align-items-start"
+          style={{
+            background: "#EAF4FF",
+            borderRadius: "1rem 1rem 1rem 1rem",
+            border: "2px solid gray",
+            lineHeight:"2.5rem"
+          }}
+        >
+          <div class="col">
+          <div style={{fontWeight:"600"}}> Skill</div>
+            <div className="Skill01">Tackle / Razor / SleepPowder</div>
+            <div className="Skill02">VineWhip / Razor / SleepPowder</div>
+            <div className="Skill03">Tackle / SolarBeam / PoisonPowder / EnergyBall</div>
+            <div className="Skill04">Scratch / Flamethrower / SunnyDay / DragonRush</div>
+            <div className="Skill05">DragonClaw / Scratch / DragonTail / Air Slash</div>
+            <div className="Skill06">Tackle / WaterGun / FocusPunch / MuddyWater</div>
+            <div className="Skill07">Tackle / WaterGun / Waterfall / AuraSphere</div>
+            <div className="Skill08">Nuzzle / PlayNice / ThunderShock / Thunder</div>
+            <div className="Skill09">Discharge / ElectroBall / LightScreen / Charge</div>
+            <div className="Skill10">DefenseCurl / GyroBall / IronTail / Counter</div>
+            <div className="Skill11">CrushClaw / GyroBall / MetalClaw / NightSlash</div>
+          </div>
+          <div class="col">
+            <div style={{fontWeight:"600"}}>Type</div>
+            <div className="typeS1">GRASS,POISON</div>
+            <div className="typeS2">GRASS,POISON</div>
+            <div className="typeS3">FIRE</div>
+            <div className="typeS4">FIRE,FLYING</div>
+            <div className="typeS5">WATER</div>
+            <div className="typeS6">WATER</div>
+            <div className="typeS7">ELECTRIC</div>
+            <div className="typeS8">ELECTRIC,PSYCHIC</div>
+            <div className="typeS9">ICE,STEEL</div>
+            <div className="typeS10">ICE,STEEL</div>
+          <div class="col">
+            <div style={{ fontWeight: "600" }}>ATK</div>
+            <div className="nameS1">80</div>
+            <div className="nameS2">100</div>
+            <div className="nameS3">100</div>
+            <div className="nameS4">150</div>
+            <div className="nameS5">200</div>
+            <div className="nameS6">10</div>
+            <div className="nameS7">70</div>
+            <div className="nameS8">50</div>
+            <div className="nameS9">40</div>
+            <div className="nameS10">150</div>
+          </div>
+          </div>
+         
+        </div>
+      </div>
         </div>
       </div>
     </div>
