@@ -62,6 +62,7 @@ const Layout = () => {
           <li>
             <Link to="/sports"> Sports & Outdoors </Link>
           </li>
+         
         </ul>
       </nav>
 
