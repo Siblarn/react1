@@ -10,8 +10,6 @@ export default function Cardmain() {
 
       <section className="demo">
         <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
         <span className="operator"></span>
         <span className="operator"></span>
       </section>

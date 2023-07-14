@@ -76,30 +76,6 @@
     0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
-.card.charizard {
-  --color1: var(--charizard1);
-  --color2: var(--charizard2);
-  --front: var(--charizardfront);
-}
-.card.pika {
-  --color1: var(--pika1);
-  --color2: var(--pika2);
-  --front: var(--pikafront);
-}
-.card.mewtwo {
-  --color1: var(--mewtwo1);
-  --color2: var(--mewtwo2);
-  --front: var(--mewtwofront);
-}
-.card.eevee {
-  --color1: #ec9bb6;
-  --color2: #ccac6f;
-  --color3: #69e4a5;
-  --color4: #8ec5d6;
-  --color5: #b98cce;
-  --front: var(--eeveefront);
-}
-
 .card:before,
 .card:after {
   content: "";
@@ -325,10 +301,6 @@
 }
 
 
-
-
-
-
 html, body {
   height: 100%;
   background-color: #333844;
@@ -375,10 +347,6 @@ p {
     flex-direction: row;
   }
 }
-
-
-
-
 
 
 .cards .card {
@@ -473,6 +441,133 @@ html,body,main {
   position: relative;
   overflow: hidden;
   margin: 20px;
+  overflow: hidden;
+  z-index: 10;
+  touch-action: none;
+  
+  border-radius: 5% / 3.5%;
+  box-shadow: 
+    -5px -5px 5px -5px var(--color1), 
+    5px 5px 5px -5px var(--color2), 
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255,255,255,0),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  
+  background-color: #040712;
+  background-image: var(--front);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  
+}
+
+.card3 {
+
+  width: 71.5vw;
+  height: 100vw;
+     width: clamp(200px, 61vh, 18vw);
+     height: clamp(280px, 85vh, 25.2vw);
+  @media screen and (min-width: 600px) {
+     width: 61vh;
+     height: 85vh;
+     max-width: 500px;
+     max-height: 700px;
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+  
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  overflow: hidden;
+  z-index: 10;
+  touch-action: none;
+  
+  border-radius: 5% / 3.5%;
+  box-shadow: 
+    -5px -5px 5px -5px var(--color1), 
+    5px 5px 5px -5px var(--color2), 
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255,255,255,0),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  
+  background-color: #000000;
+  background-image: var(--front);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  
+}
+.card4 {
+
+  width: 71.5vw;
+  height: 100vw;
+     width: clamp(200px, 61vh, 18vw);
+     height: clamp(280px, 85vh, 25.2vw);
+  @media screen and (min-width: 600px) {
+     width: 61vh;
+     height: 85vh;
+     max-width: 500px;
+     max-height: 700px;
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+  
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  overflow: hidden;
+  z-index: 10;
+  touch-action: none;
+  
+  border-radius: 5% / 3.5%;
+  box-shadow: 
+    -5px -5px 5px -5px var(--color1), 
+    5px 5px 5px -5px var(--color2), 
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255,255,255,0),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  
+  background-color: #040712;
+  background-image: var(--front);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  
+}
+.card5 {
+
+  width: 71.5vw;
+  height: 100vw;
+     width: clamp(200px, 61vh, 18vw);
+     height: clamp(280px, 85vh, 25.2vw);
+  @media screen and (min-width: 600px) {
+     width: 61vh;
+     height: 85vh;
+     max-width: 500px;
+     max-height: 700px;
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+  
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
   overflow: hidden;
   z-index: 10;
   touch-action: none;
