@@ -10,6 +10,10 @@ export default function Cardmain() {
 
       <section className="demo">
         <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card" style={{width:'12rem', height:"16.5rem"}}></div>
+        <div className="card" style={{width:'12rem', height:"16.5rem"}}></div>
         <span className="operator"></span>
         <span className="operator"></span>
       </section>
@@ -19,7 +23,7 @@ export default function Cardmain() {
         </div>
         <style className="hover2"></style>
         <section className="demo2">
-          <div className="card2"></div>
+          <div className="card2" style={{width:'12rem', height:"16.5rem"}}></div>
           <span className="operator2"></span>
           <span className="operator2"></span>
         </section>
@@ -29,7 +33,7 @@ export default function Cardmain() {
         </div>
         <style className="hover2"></style>
         <section className="demo2">
-          <div className="card2"></div>
+          <div className="card2" style={{width:'12rem', height:"16.5rem"}}></div>
           <span className="operator2"></span>
           <span className="operator2"></span>
         </section>
