@@ -1,9 +1,13 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import pika from "../image/pika.png";
 import mewtwo from "../image/mewtwo.png";
 import evee from "../image/evee.png";
 
 export default function Cardmain() {
+  const handleClick = (e) => {
+    console.log(e.currentTarget.getAttribute("data-value"));
+  };
   return (
     <div>
       <h1>Pokemon Card</h1>
@@ -45,7 +49,10 @@ export default function Cardmain() {
         <span className="operator"></span>
       </section>
       <div style={{ justifyContent: "center", display: "flex" }}>
-        <div className="" style={{ color: "black", fontWeight: "750", margin:"30px"}}>
+        <div
+          className=""
+          style={{ color: "black", fontWeight: "750", margin: "30px" }}
+        >
           Player 1
         </div>
         <style className="hover2"></style>
@@ -58,7 +65,10 @@ export default function Cardmain() {
           <span className="operator2"></span>
         </section>
 
-        <div className="" style={{ color: "black", fontWeight: "750", margin:"30px" }}>
+        <div
+          className=""
+          style={{ color: "black", fontWeight: "750", margin: "30px" }}
+        >
           Player 2<div className="card10"></div>
         </div>
         <style className="hover2"></style>
@@ -70,6 +80,13 @@ export default function Cardmain() {
           <span className="operator2"></span>
           <span className="operator2"></span>
         </section>
+        <button
+          className="btn btn-success"
+          data-value="apply clicked"
+          onClick={handleClick}
+        >
+          <Link to="/Choose skill">Choose skill</Link>
+        </button>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export default function Nav() {
           <Link to="/Skill">Pokemon/Skill</Link>
         </li>
         <li className="ml-5">
-        <Link to="/PlayPokemon">Play</Link>
+        <Link to="/PlayPokemon">How To Play</Link>
         </li>
         <li>
           
