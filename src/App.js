@@ -8,6 +8,7 @@ import Nav from "./Navbar/Nav";
 import Testcard from "./Pokemon/Testcard";
 import Cardmain from "./Pokemon/Cardmain";
 import Skill from "./Play/Skill";
+import Ingame from "./Play/Ingame";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route index element={<Cardmain/>} />
         <Route path="/Skill" element={<Testcard/>} />
         <Route path="/Choose skill" element={<Skill/>} />
+        <Route path="/ingame" element={<Ingame/>} />
+        
      
   
         </Route>

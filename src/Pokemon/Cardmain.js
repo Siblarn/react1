@@ -80,8 +80,8 @@ export default function Cardmain() {
           <span className="operator2"></span>
           <span className="operator2"></span>
         </section>
-        <button
-          className="btn btn-success"
+        <button className="bubbly-button"
+        style={{borderRadius:"100px 100px"}}
           data-value="apply clicked"
           onClick={handleClick}
         >

@@ -140,7 +140,7 @@ export default function Testcard() {
             <div className="Skill27">Iron Tail</div>
             <div className="Skill28">Rapid Spin</div>
             <div className="Skill29">Crush Claw</div>
-            <div className="Skill30">Rapid Spin</div>
+            <div className="Skill30">Flail</div>
             <div className="Skill31">Sludge</div>
             <div className="Skill32">Sludge Bomb</div>
             <div className="Skill33">Flash Cannon</div>
@@ -217,7 +217,7 @@ export default function Testcard() {
             <div className="nameS27">100</div>
             <div className="nameS28">50</div>
             <div className="nameS29">75</div>
-            <div className="nameS30">50</div>
+            <div className="nameS30">0</div>
             <div className="nameS31">65</div>
             <div className="nameS32">90</div>
             <div className="nameS33">80</div>
