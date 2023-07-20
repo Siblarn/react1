@@ -4,14 +4,14 @@ import tackle from "../image/tackle.png";
 import solarbeam from "../image/solarbeam.png";
 
 export default function Skill() {
-  const [count, setCount] = useState(0);
-  const [player2, setPlayer2] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [player2, setPlayer2] = useState(0);
 
   return (
     <div className="">
       Choose Skill
       <div className="flex ml-3 justify-between font-extrabold">
-        <div className=" mr-3">
+        {/* <div className=" mr-3">
           Player 1
           <div>
             <p
@@ -28,8 +28,8 @@ export default function Skill() {
               {count}
             </p>
           </div>
-        </div>
-        <div className="justify-between">
+        </div> */}
+        {/* <div className="justify-between">
           Player 2
           <div>
             <p
@@ -46,7 +46,7 @@ export default function Skill() {
               {count}
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div
         style={{
@@ -57,10 +57,10 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-secondary"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           {" "}
           TACKLE
@@ -83,10 +83,10 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-success mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           {" "}
           Vine Whip
@@ -94,10 +94,10 @@ export default function Skill() {
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-success mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Razor Leaf
         </div>
@@ -105,10 +105,10 @@ export default function Skill() {
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-success mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Seed Bomb
         </div>
@@ -116,10 +116,10 @@ export default function Skill() {
 
         <div
           className="btn btn-outline-success mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Solar Beam
         </div>
@@ -131,70 +131,70 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Dragon Breath
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Ember
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Fire Fang
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Flamethrower
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Inferno
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-danger mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Flare Blitz
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-info mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Air Slash
         </div>
@@ -206,60 +206,60 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Hydro Pump
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Aqua Tail
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Water Pulse
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Water Gun
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Aqua Jet
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-primary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Aura Sphere
         </div>
@@ -271,90 +271,90 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Thunder
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Thunderbolt
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Spark
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Thunder Shock
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Nuzzle
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Wild Charge
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Disarming Voice
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Thunder Punch
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-warning mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Charge Beam
         </div>
@@ -366,70 +366,70 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Flash Cannon
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Metal Claw
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Iron Tail
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Rapid Spin
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Crush Claw
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Flail
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-secondary mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Flash Cannon
         </div>
@@ -441,26 +441,27 @@ export default function Skill() {
       >
         <div
           className="btn btn-outline-dark mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Sludge
         </div>
         <img src={tackle} width="40rem" alt="mewtwo" />
         <div
           className="btn btn-outline-dark mt-1"
-          type="submit"
-          onClick={() => {
-            setCount(count + 1);
-          }}
+          // type="submit"
+          // onClick={() => {
+          //   setCount(count + 1);
+          // }}
         >
           Sludge Bomb
         </div>
         <img src={solarbeam} width="35rem" alt="solarbeam" />
+        
       </div>
-      <div>
+      <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
         <button class="bubbly-button" style={{ borderRadius: "50px 50px" }}>
           <Link to="/ingame">Start Game</Link>
         </button>

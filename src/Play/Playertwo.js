@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { ReactDOM } from "react";
 
-export default function Ingame() {
+export default function Playertwo() {
   const [inputs, setInputs] = useState({});
   const handleChange = (event) => {
     const name = event.target.name;
@@ -24,7 +24,7 @@ export default function Ingame() {
           fontFamily: "Roboto",
         }}
       >
-        Player 1
+        Player 2
         <form onSubmit={handleSubmit}>
           <label>
             Your Pokemon :
@@ -77,7 +77,7 @@ export default function Ingame() {
         </form>
       </div>
       <div className="button2">
-        <Link to="/playertwo">Player 2</Link>
+      <Link to="/start">Start</Link>
       </div>
     </div>
   );
