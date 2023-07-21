@@ -54,7 +54,7 @@ export default function Cardmain() {
           style={{ width: "12rem", height: "16.5rem" }}
         ></div>
         <div>
-          <div className="e9">
+          <div className="ei9">
             <img src={sandslash} width="196rem" alt="sandslash" />
           </div>
           <div className="ei5">
