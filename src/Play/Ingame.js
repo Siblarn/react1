@@ -26,6 +26,15 @@ export default function Ingame() {
       >
         Player 1
         <form onSubmit={handleSubmit}>
+        <label>
+              Username :
+              <input
+                type="text"
+                name="username"
+                value={inputs.username || ""}
+                onChange={handleChange}
+              />
+            </label>
           <label>
             Your Pokemon :
             <input

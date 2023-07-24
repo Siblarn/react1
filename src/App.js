@@ -11,6 +11,7 @@ import Skill from "./Play/Skill";
 import Ingame from "./Play/Ingame";
 import Playertwo from "./Play/Playertwo";
 import Battle from "./Play/Battle";
+import Oneplayer from "./Play/Oneplayer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/ingame" element={<Ingame/>} />
         <Route path="/playertwo" element={<Playertwo/>} />
         <Route path="/start" element={<Battle/>} />
+        <Route path="/oneplayer" element={<Oneplayer/>} />
         </Route>
       </Routes>
     </BrowserRouter>

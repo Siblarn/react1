@@ -462,8 +462,12 @@ export default function Skill() {
         
       </div>
       <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <button class="bubbly-button mr-3" style={{ borderRadius: "50px 50px" }}>
+          <Link to="/ingame">Start Game 2 player</Link>
+        </button>
+        
         <button class="bubbly-button" style={{ borderRadius: "50px 50px" }}>
-          <Link to="/ingame">Start Game</Link>
+          <Link to="/oneplayer">Start Game 1 player</Link>
         </button>
       </div>
     </div>
