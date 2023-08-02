@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ReactDOM from "react";
+
 
 function Form(props) {
   const [name, setName] = useState("");
@@ -10,7 +12,7 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    props.addTask(name);
+    // props.addTask(name);
     setName("");
   }
   function addTask(name) {
@@ -34,7 +36,7 @@ function Form(props) {
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit" className="btn toggle-btn btn__lg">
         Add
       </button>
     </form>
