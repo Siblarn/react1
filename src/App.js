@@ -8,6 +8,8 @@ import Testfinal from "./Test/Testfinal";
 import Main from "./Routes/Main";
 import Login from "./Navbar/Login";
 import Registereiei from "./Navbar/Register";
+import Active from "./Test/Active";
+import Complete from "./Test/Complete";
 
 
 function App(props) {
@@ -21,6 +23,8 @@ function App(props) {
             <Route index element={<div>WELCOM</div>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Registereiei/>} />
+            <Route path="/active" element={<Active/>} />
+            <Route path="/complete" element={<Complete/>} />
          
           </Route>
         </Routes>
