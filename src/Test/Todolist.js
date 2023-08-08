@@ -3,8 +3,8 @@ import React, { useState } from "react";
 export default function Todolist(props) {
   const [taskList, setTaskList] = useState("");
   const [tasks, setTasks] = useState("");
-  const [isEditing, setEditing] = useState(false);
-  function editTask(id, newName) {
+  const [isediting, setEditing] = useState(false);
+  function EditTask(id, newName) {
     const editedTaskList = tasks.map((task) => {
       if (id === task.id) {
         return { ...task, name: newName };
