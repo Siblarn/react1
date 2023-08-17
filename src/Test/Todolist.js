@@ -33,7 +33,7 @@ export default function Todolist(props) {
         <button type="button" className="btn toggle-btn" onClick={() => setEditing(true)}>
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
-        <button type="button" className="btn btn__danger">
+        <button type="button" className="btn btn-outline-danger">
           Delete <span className="visually-hidden">{props.name}</span>
         </button>
       </div>

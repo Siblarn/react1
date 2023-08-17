@@ -33,7 +33,7 @@ export default function Active(props) {
             autoComplete="off"
             value={name}
             onChange={handleChange}
-            placeholder="Staff Name"
+            placeholder="UserName"
           />
           <button type="submit" className="btn toggle-btn btn__sm">
             submit
@@ -52,7 +52,7 @@ export default function Active(props) {
             autoComplete="off"
             value={name}
             onChange={handleChange}
-            placeholder="Staff Name"
+            placeholder="UserName"
           />
           <button type="submit" className="btn toggle-btn btn__sm">
             submit
@@ -71,7 +71,7 @@ export default function Active(props) {
             autoComplete="off"
             value={name}
             onChange={handleChange}
-            placeholder="Staff Name"
+            placeholder="UserName"
           />
           <button type="submit" className="btn toggle-btn btn__sm">
             submit

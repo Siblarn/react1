@@ -10,6 +10,7 @@ import Login from "./Navbar/Login";
 import Registereiei from "./Navbar/Register";
 import Active from "./Test/Active";
 import Complete from "./Test/Complete";
+import Check from "./Test/Check";
 
 
 function App(props) {
@@ -25,6 +26,7 @@ function App(props) {
             <Route path="/register" element={<Registereiei/>} />
             <Route path="/active" element={<Active/>} />
             <Route path="/complete" element={<Complete/>} />
+            <Route path="/check" element={<Check/>} />
          
           </Route>
         </Routes>
