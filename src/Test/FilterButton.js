@@ -20,12 +20,12 @@ function FilterButton() {
       </button>
       <button type="button" className="btn toggle-btn" aria-pressed="false">
         <span className="visually-hidden">Show </span>
-        <span> <Link to="/complete">Complete</Link></span>
+        <span> <Link to="/check">check</Link></span>
         <span className="visually-hidden"> tasks</span>
       </button>
       <button type="button" className="btn toggle-btn" aria-pressed="false">
         <span className="visually-hidden">Show </span>
-        <span> <Link to="/check">check</Link></span>
+        <span> <Link to="/complete">Complete</Link></span>
         <span className="visually-hidden"> tasks</span>
       </button>
     </div>

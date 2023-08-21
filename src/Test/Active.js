@@ -12,7 +12,6 @@ export default function Active(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // props.addTask(name);
     setName("");
   }
   function addTask(name) {

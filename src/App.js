@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -25,8 +24,8 @@ function App(props) {
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Registereiei/>} />
             <Route path="/active" element={<Active/>} />
-            <Route path="/complete" element={<Complete/>} />
             <Route path="/check" element={<Check/>} />
+            <Route path="/complete" element={<Complete/>} />
          
           </Route>
         </Routes>
