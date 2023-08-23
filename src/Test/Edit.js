@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 export default function Edit() {
+  const [isEditing, setEditing] = useState(false);
+
   const editingTemplate = (
     <form className="stack-small">
       <div className="form-group">
@@ -49,4 +51,5 @@ export default function Edit() {
   );
 
   return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+  
 }

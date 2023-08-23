@@ -4,8 +4,9 @@ import withReactContent, { SweetAlert2 } from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 import { json, useNavigate } from "react-router-dom";
 
-function Registereiei() {
+function Register() {
   const [inputs, setInputs] = useState({});
+  const endpoint = "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app"
   const MySwal = withReactContent(Swal);
   const [navigate, setNavigate] = useState({});
   const handleChange = (event) => {
@@ -51,8 +52,8 @@ function Registereiei() {
       body: raw,
       redirect: "follow",
     };
-
-    fetch("http://61.7.237.18:1150/user/new", requestOptions)
+  //  "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app/user/new"
+    fetch(`${endpoint}/user/new`,requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.status === "ok") {
@@ -207,4 +208,4 @@ function Registereiei() {
     </div>
   );
 }
-export default Registereiei;
+export default Register;
