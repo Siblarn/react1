@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import ReactDOM from "react";
 import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
+import Showmem from "../Member/Showmem";
 
 export default function Main() {
   let user = localStorage.getItem("user");
@@ -47,36 +48,43 @@ export default function Main() {
               <>
                 <Link to="/login">Login</Link>
               </>
-            ) : (
-              <>
+              ) : (
+                <>
                 <Link
-                  to="/"
-                  onClick={() => {
+                to="/"
+                onClick={() => {
                     localStorage.removeItem("user");
                     setIsUserLogin(false);
                   }}
-                >
+                  >
                   Logout
-                </Link>
-              </>
-            )}
-          </div> */}
-          {dynamicLogin(isUserLogin)}
+                  </Link>
+                  </>
+                  )}
+                </div> */}
+          <div className="btn btn-outline-primary">
+            {dynamicLogin(isUserLogin)}
+          </div>
           {/* <div className="btn btn-outline-primary">
             <Link
-              to="/"
-              onClick={() => {
-                localStorage.removeItem("user");
-              }}
+            to="/"
+            onClick={() => {
+              localStorage.removeItem("user");
+            }}
             >
               Logout
-            </Link>
+              </Link>
           </div> */}
           <div className="btn btn-outline-primary">
             <Link to="/register">Register</Link>
           </div>
         </div>
       </nav>
+      <div>
+        <div>
+          <Showmem />
+        </div>
+      </div>
 
       <Outlet />
     </div>

@@ -84,5 +84,6 @@ export default function Login() {
       </label>
       <input class="btn btn-outline-success mx-1" type="submit" />
     </form>
+  
   );
 }
