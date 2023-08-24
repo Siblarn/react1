@@ -8,7 +8,7 @@ import Form from "./Form";
 export default function Testfinal() {
   const [todo, setTodo] = useState(null);
   const baseURL =
-    "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app/todolists";
+    "https://2c2e-2001-fb1-2d-352d-96f-ee87-a38b-e725.ngrok-free.app/todolists";
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       setTodo(response.data);
@@ -25,14 +25,39 @@ export default function Testfinal() {
         <FilterButton />
       </div>
       <h2 className="list-heading">Work List !</h2>
-      <div className="todo stack-small">
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+      <div className="todo stack-small"  key={todo._id}>
         {todo.map((todo) => (
-          <div className="list-group">
+          <div
+            className="list-group"
+            key={todo._id}
+            style={{
+              border: "1px solid gray",
+              borderRadius: "20px 20px",
+              display: "flex",
+            }}
+          >
+            <div
+              style={{
+                borderBottom: "0.5px solid gray",
+                marginLeft: "10rem",
+                marginTop: "10px",
+              }}
+            >
+              <p>
+                <input type="checkbox" id="test2" checked="checked" />
+                <label for="test2">Yellow</label>
+                {todo.todoName}
+              </p>
+            </div>
+            <div style={{ marginLeft: " 32rem " }}> owner : ชื่อปลอม </div>
+            <div style={{ marginLeft: "13rem" }}>{todo.createdAt}</div>
+            <div style={{ marginLeft: "13rem" }}>{todo.updatedAt}</div>
+            <div>{todo._id}</div>
+            <div>{todo.ownerId}</div>
+            <div>{todo.statusChecker}</div>
+          </div>
+        ))}
+        {/* <div className="list-group" key={todo._id}>
             <div>{todo.todoName}</div>
             <div> owner : ชื่อปลอม </div>
             <div>{todo._id}</div>
@@ -40,12 +65,8 @@ export default function Testfinal() {
             <div>{todo.statusChecker}</div>
             <div>{todo.createdAt}</div>
             <div>{todo.updatedAt}</div>
-          </div>
-        ))}
-        </ul>
+          </div> */}
       </div>
-     
-
     </div>
   );
 }
