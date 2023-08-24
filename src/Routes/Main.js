@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
-import ReactDOM from "react";
-import { BrowserRouter, Form, Route, Routes } from "react-router-dom";
 import Showmem from "../Member/Showmem";
 
 export default function Main() {
@@ -35,6 +33,9 @@ export default function Main() {
 
   return (
     <div className="">
+      <div style={{ justifyContent: "center", alignItems: "center" ,marginLeft:"48rem"}}>
+        <Showmem />
+      </div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <div className="btn btn-outline-primary">
@@ -80,11 +81,6 @@ export default function Main() {
           </div>
         </div>
       </nav>
-      <div>
-        <div>
-          <Showmem />
-        </div>
-      </div>
 
       <Outlet />
     </div>
