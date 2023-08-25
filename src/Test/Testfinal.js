@@ -7,15 +7,60 @@ import Form from "./Form";
 
 export default function Testfinal() {
   const [todo, setTodo] = useState(null);
+  const [tododelete, setTodoelete] = useState(null);
+  const endpoint =
+    "http://61.7.237.18:747";
   const baseURL =
-    "https://2c2e-2001-fb1-2d-352d-96f-ee87-a38b-e725.ngrok-free.app/todolists";
-  useEffect(() => {
+    "http://61.7.237.18:747/todolists";
+  if(todo== null){
     axios.get(baseURL).then((response) => {
-      setTodo(response.data);
+      setTodo(response.data.reverse());
       console.log(response.data);
     });
-  }, []);
+  }
+ 
   if (!todo) return null;
+  
+  const TodolistDelete = async (todo) => {
+    // fetch(`${endpoint}/_id`, requestOptions)
+    try {
+        const response = await fetch(`http://61.7.237.18:747/todolists/${todo}` ,{
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+        },
+        });
+        if (response.ok) {
+          console.log('success');
+          window.location.reload();
+        } else {
+          console.error('error');
+        }
+      } catch (error) {
+        console.error('error', error);
+      }
+    };
+    const UserUpdate = id => {
+      var data = {
+        'id': id
+      }
+      fetch(`http://61.7.237.18:747/todolists/${todo}`, {
+        method: 'UPDATE',
+        headers: {
+          Accept: 'application/form-data',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(res => res.json())
+      .then(
+        (result) => {
+          
+        }
+      )
+    }
+      
+
 
   return (
     <div className="todoapp stack-large">
@@ -25,7 +70,7 @@ export default function Testfinal() {
         <FilterButton />
       </div>
       <h2 className="list-heading">Work List !</h2>
-      <div className="todo stack-small"  key={todo._id}>
+      <div className="todo stack-small" key={todo._id}>
         {todo.map((todo) => (
           <div
             className="list-group"
@@ -36,16 +81,22 @@ export default function Testfinal() {
               display: "flex",
             }}
           >
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              onClick={() => TodolistDelete(todo._id)}
+              style={{ margin: "10px", marginLeft: "40rem" }}
+            ></button>
             <div
               style={{
                 borderBottom: "0.5px solid gray",
-                marginLeft: "10rem",
-                marginTop: "10px",
+                marginLeft: "5rem",
               }}
             >
               <p>
-                <input type="checkbox" id="test2" checked="checked" />
-                <label for="test2">Yellow</label>
+                <input type="checkbox" style={{ marginRight: "20px" }} />
+                <label for="test2"></label>
                 {todo.todoName}
               </p>
             </div>
@@ -55,6 +106,7 @@ export default function Testfinal() {
             <div>{todo._id}</div>
             <div>{todo.ownerId}</div>
             <div>{todo.statusChecker}</div>
+            <div>{todo.caseHandler}</div>
           </div>
         ))}
         {/* <div className="list-group" key={todo._id}>

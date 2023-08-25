@@ -14,13 +14,13 @@ function FilterButton() {
       <button type="button" className="btn toggle-btn" aria-pressed="false">
         <span className="visually-hidden">Show </span>
         <span>
-        <Link to="/active">Active</Link>
+        <Link to="/received">Received Work</Link>
         </span>
         <span className="visually-hidden"> tasks</span>
       </button>
       <button type="button" className="btn toggle-btn" aria-pressed="false">
         <span className="visually-hidden">Show </span>
-        <span> <Link to="/check">check</Link></span>
+        <span> <Link to="/check">Check Work</Link></span>
         <span className="visually-hidden"> tasks</span>
       </button>
       <button type="button" className="btn toggle-btn" aria-pressed="false">

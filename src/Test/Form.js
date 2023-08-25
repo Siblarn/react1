@@ -8,7 +8,7 @@ function Form(props) {
   const [name, setName] = useState("");
   const [tasks, setTasks] = useState(props.tasks);
   const [inputs, setInputs] = useState({});
-  const endpoint = "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app"
+  const endpoint = "http://61.7.237.18:747"
   console.log(name);
   const user = localStorage.getItem("user");
   const userParse = JSON.parse(user);
@@ -41,13 +41,15 @@ function Form(props) {
     fetch(`${endpoint}/todolists`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
+        window.location.reload();
         if (result.status === "ok") {
-          MySwal.fire({
-            html: <i>{result.message}</i>,
-            icon: "success",
-          }).then((value) => {
-            navigate("/");
-          });
+          // MySwal.fire({
+          //   html: <i>{result.message}</i>,
+          //   icon: "success",
+          // }).then((value) => {
+          //   navigate("/");
+          // });
+          window.location.reload();
         } else {
           MySwal.fire({
             html: <i>{result.message}</i>,

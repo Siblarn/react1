@@ -24,7 +24,7 @@ function App(props) {
             <Route index element={<Showmem/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Registereiei/>} />
-            <Route path="/active" element={<Active/>} />
+            <Route path="/received" element={<Active/>} />
             <Route path="/check" element={<Check/>} />
             <Route path="/complete" element={<Complete/>} />
          

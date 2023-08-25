@@ -9,7 +9,7 @@ export default function Login() {
   const [result, setResult] = useState({});
   const navigate = useNavigate();
   const endpoint =
-    "https://2c2e-2001-fb1-2d-352d-96f-ee87-a38b-e725.ngrok-free.app/todolists";
+    "http://61.7.237.18:747";
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;

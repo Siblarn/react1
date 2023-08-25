@@ -33,7 +33,7 @@ export default function Main() {
 
   return (
     <div className="">
-      <div style={{ justifyContent: "center", alignItems: "center" ,marginLeft:"41.5rem"}}>
+      <div style={{ justifyContent: "center", alignItems: "center" ,marginLeft:"40rem"}}>
         <Showmem />
       </div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
