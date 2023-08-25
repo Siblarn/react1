@@ -8,6 +8,7 @@ import Form from "./Form";
 export default function Testfinal() {
   const [todo, setTodo] = useState(null);
   const [tododelete, setTodoelete] = useState(null);
+  const [todoupdate, ssetTodoupdate] = useState(null);
   const endpoint =
     "http://61.7.237.18:747";
   const baseURL =
@@ -44,7 +45,7 @@ export default function Testfinal() {
       var data = {
         'id': id
       }
-      fetch(`http://61.7.237.18:747/todolists/${todo}`, {
+      fetch("http://61.7.237.18:747/todolists" ,{
         method: 'UPDATE',
         headers: {
           Accept: 'application/form-data',
@@ -95,7 +96,7 @@ export default function Testfinal() {
               }}
             >
               <p>
-                <input type="checkbox" style={{ marginRight: "20px" }} />
+                <input type="checkbox" style={{ marginRight: "20px" }}  onClick={() => UserUpdate(todo._id)}/>
                 <label for="test2"></label>
                 {todo.todoName}
               </p>
