@@ -1,14 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
-import ReactDOM from "react";
 import { json } from "react-router-dom";
 import Swal from "sweetalert2";
+import Button from "@mui/material/Button";
 
 function Form(props) {
   const [name, setName] = useState("");
   const [tasks, setTasks] = useState(props.tasks);
   const [inputs, setInputs] = useState({});
-  const endpoint = "http://61.7.237.18:747"
+  const endpoint = "http://61.7.237.18:747";
   console.log(name);
   const user = localStorage.getItem("user");
   const userParse = JSON.parse(user);
@@ -41,7 +41,6 @@ function Form(props) {
     fetch(`${endpoint}/todolists`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        window.location.reload();
         if (result.status === "ok") {
           // MySwal.fire({
           //   html: <i>{result.message}</i>,
@@ -56,7 +55,8 @@ function Form(props) {
           //   icon: "error",
           // });
         }
-        console.log(result);
+
+        window.location.reload();
       })
       .catch((error) => console.log("error", error));
   }
@@ -85,12 +85,7 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
-          Final Project ♥
-        </label>
-      </h2>
-      <input
+      {/* <input
         type="text"
         id="new-todo-input"
         className="input input__lg"
@@ -98,16 +93,28 @@ function Form(props) {
         autoComplete="off"
         value={name}
         onChange={handleChange}
-      />
-      <button
-        type="submit"
-        className="btn toggle-btn btn__lg"
-        onClick={() => {
-          addTask();
-        }}
-      >
-        Add
-      </button>
+      /> */}
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          value={name}
+          onChange={handleChange}
+          style={{ backgroundColor:"white", color:"#3b1c32"}}
+        ></textarea>
+      </div>
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" ,margin:"10px 10px"}}>
+        <Button
+          variant="contained"
+          onClick={() => {
+            addTask();
+          }}
+          style={{ backgroundColor:"#a4d4b4", color:"#3b1c32", fontWeight:"bold"}}
+        >
+          ADD
+        </Button>
+      </div>
     </form>
   );
 }

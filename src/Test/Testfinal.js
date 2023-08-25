@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import FilterButton from "./FilterButton";
 import Form from "./Form";
+import Showmem from "../Member/Showmem";
 import { margin } from "@mui/system";
 // import ReactDOM from "react";
 // import Todolist from "./Todolist";
@@ -9,7 +10,8 @@ import { margin } from "@mui/system";
 export default function Testfinal() {
   const [todo, setTodo] = useState(null);
   let user = localStorage.getItem("user");
-  const [isUserLogin, setIsUserLogin] = useState(user ? true : false);
+  const json_user = JSON.parse(user);
+  const [isUserLogin, setIsUserLogin] = useState(json_user ? true : false);
   const [formattedDate, setFormattedDate] = useState("");
   const [tododelete, setTodoelete] = useState(null);
   const endpoint = "http://61.7.237.18:747";
@@ -46,7 +48,7 @@ export default function Testfinal() {
   const UserUpdate = async (todo) => {
     var data = {
       statusChecker: true,
-      caseHandler: user.userId,
+      caseHandler: json_user.data.userId,
     };
     await fetch(`http://61.7.237.18:747/todolists/${todo}`, {
       method: "PATCH",
@@ -56,7 +58,6 @@ export default function Testfinal() {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(res);
       window.location.reload();
     });
   };
@@ -91,7 +92,7 @@ export default function Testfinal() {
 
   return (
     <div className="todoapp stack-large">
-      <h1>ToDoList</h1>
+      <Showmem />
       <Form />
       <div className="filters btn-group stack-exception">
         <FilterButton />
@@ -105,10 +106,13 @@ export default function Testfinal() {
             style={{
               border: "1px solid gray",
               borderRadius: "20px",
+              backgroundColor:"white",
               display: "flex",
               padding: "10px", // Added "px" units to each value
               justifyContent: "center",
               alignItems: "center",
+              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
+              marginBottom: "10px",
               width: "100%", // Changed "justifyItems" to "alignItems"
             }}
           >
