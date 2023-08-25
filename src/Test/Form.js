@@ -51,10 +51,10 @@ function Form(props) {
           // });
           window.location.reload();
         } else {
-          MySwal.fire({
-            html: <i>{result.message}</i>,
-            icon: "error",
-          });
+          // MySwal.fire({
+          //   html: <i>{result.message}</i>,
+          //   icon: "error",
+          // });
         }
         console.log(result);
       })
