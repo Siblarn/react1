@@ -32,10 +32,8 @@ export default function Main() {
   };
 
   return (
-    <div className="">
-      <div style={{ justifyContent: "center", alignItems: "center" ,marginLeft:"40rem"}}>
-        <Showmem />
-      </div>
+    <div className="" >
+     
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <div className="btn btn-outline-primary">
