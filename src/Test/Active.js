@@ -23,6 +23,7 @@ export default function Active(props) {
   const UserUpdate = async (todo) => {
     var data = {
       statusChecker: true,
+      status: "PENDING_REVIEW",
       caseHandler: json_user.data.userId,
     };
     await fetch(`http://61.7.237.18:747/todolists/${todo}`, {
@@ -166,6 +167,7 @@ export default function Active(props) {
                       {calculateFormattedDate(todo.createdAt)}
                     </div>
                   </div>
+                  <div>{todo.status}</div>
                   {/* <div>{todo.createdAt}</div> */}
                   <div
                     style={{
@@ -178,9 +180,12 @@ export default function Active(props) {
                       fontSize: "13px",
                     }}
                   >
-                    <div style={{}}>{"DUE TO : "}</div>
-                    {calculateTimeAgo(todo.scheduledAt)}
-                  </div>
+                  {/* {todo.status === "active"  && (
+  <div><div style={{}}>
+      DUE TO : {calculateTimeAgo(todo.scheduledAt)}
+    </div>
+  </div>
+)} */}
 
                   <div
                     style={{
@@ -189,32 +194,36 @@ export default function Active(props) {
                       justifyContent: "space-around",
                     }}
                   >
-                    <button
-                      type="submit"
-                      style={{
-                        backgroundColor: "#a4d4b4",
-                        color: "#3b1c32",
-                        fontWeight: "bold",
-                        borderRadius:"10px 10px",
-                      }}
-                      onClick={() => {
-                        UserUpdate(todo._id);
-                        console.log(todo.statusChecker);
-                      }}
-                    >
-                      Submit
-                    </button>
-                    <button
-                      type="submit"
-                      style={{
-                        backgroundColor: "#ef8787",
-                        color: "#3b1c32",
-                        fontWeight: "bold",
-                        borderRadius:"10px 10px"
-                      }}
-                    >
-                      Cancel
-                    </button>
+                    {todo.status === "active" && (
+                      <>
+                        <button
+                          type="submit"
+                          style={{
+                            backgroundColor: "#a4d4b4",
+                            color: "#3b1c32",
+                            fontWeight: "bold",
+                            borderRadius: "10px 10px",
+                          }}
+                          onClick={() => {
+                            UserUpdate(todo._id);
+                            console.log(todo.statusChecker);
+                          }}
+                        >
+                          Submit
+                        </button>
+                        <button
+                          type="submit"
+                          style={{
+                            backgroundColor: "#ef8787",
+                            color: "#3b1c32",
+                            fontWeight: "bold",
+                            borderRadius: "10px 10px",
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
