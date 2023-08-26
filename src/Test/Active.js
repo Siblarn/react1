@@ -88,9 +88,7 @@ export default function Active(props) {
 
   return (
     <div>
-      <div className="filters btn-group stack-exception">
-        <FilterButton />
-      </div>
+      <FilterButton/>
       <div>
         ♥ Received Work!
         <div>
@@ -173,21 +171,41 @@ export default function Active(props) {
                   </div>
                   <div>{todo.status}</div>
                   {/* <div>{todo.createdAt}</div> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "100%",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      height: "20px",
-                      marginTop: "15px",
-                      fontSize: "13px",
-                    }}
-                  >
-                    <div style={{}}>{"DUE TO : "}</div>
-                    {calculateTimeAgo(todo.scheduledAt)}
-                  </div>
-
+                  {todo.status == "active" ? (
+                    <>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          justifyContent: "center",
+                          alignContent: "center",
+                          height: "20px",
+                          marginTop: "15px",
+                          fontSize: "13px",
+                        }}
+                      >
+                        <div>{"DUE TO : "}</div>
+                        {calculateTimeAgo(todo.scheduledAt)}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          justifyContent: "center",
+                          alignContent: "center",
+                          height: "20px",
+                          marginTop: "15px",
+                          fontSize: "13px",
+                        }}
+                      >
+                        <div>{"SendAt : "}</div>
+                        {calculateFormattedDate(todo.updatedAt)}
+                      </div>
+                    </>
+                  )}
                   <div
                     style={{
                       display: "flex",

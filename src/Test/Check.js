@@ -1,8 +1,6 @@
-import React from "react";
-import Active from "./Active";
-import FilterButton from "./FilterButton";
 import React, { useState } from "react";
 import axios from "axios";
+import FilterButton from "./FilterButton";
 
 export default function Check(props) {
   const baseURL = "http://61.7.237.18:747/todolists/findList/owner";
@@ -121,9 +119,7 @@ export default function Check(props) {
 
   return (
     <div>
-          <div className="filters btn-group stack-exception">
-            <FilterButton />
-          </div>
+      <FilterButton/>
       <div>
         ♥ Review Work!
         <div>
@@ -409,7 +405,6 @@ export default function Check(props) {
           </div> */}
           </div>
         </div>
-
       </div>
     </div>
   );
