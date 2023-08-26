@@ -169,24 +169,41 @@ export default function Active(props) {
                   </div>
                   <div>{todo.status}</div>
                   {/* <div>{todo.createdAt}</div> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "100%",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      height: "20px",
-                      marginTop: "15px",
-                      fontSize: "13px",
-                    }}
-                  >
-                  {/* {todo.status === "active"  && (
-  <div><div style={{}}>
-      DUE TO : {calculateTimeAgo(todo.scheduledAt)}
-    </div>
-  </div>
-)} */}
-
+                  {todo.status == "active" ? (
+                    <>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          justifyContent: "center",
+                          alignContent: "center",
+                          height: "20px",
+                          marginTop: "15px",
+                          fontSize: "13px",
+                        }}
+                      >
+                        <div>{"DUE TO : "}</div>
+                        {calculateTimeAgo(todo.scheduledAt)}
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          justifyContent: "center",
+                          alignContent: "center",
+                          height: "20px",
+                          marginTop: "15px",
+                          fontSize: "13px",
+                        }}
+                      >
+                        <div>{"SendAt : "}</div>
+                        {calculateFormattedDate(todo.updatedAt)}
+                      </div>
+                    </>
+                  )}
                   <div
                     style={{
                       display: "flex",
