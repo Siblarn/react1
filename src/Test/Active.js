@@ -20,6 +20,22 @@ export default function Active(props) {
       console.log(response.data);
     });
   }
+  const UserUpdate = async (todo) => {
+    var data = {
+      statusChecker: true,
+      caseHandler: json_user.data.userId,
+    };
+    await fetch(`http://61.7.237.18:747/todolists/${todo}`, {
+      method: "PATCH",
+      headers: {
+        Accept: "application/form-data",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      window.location.reload();
+    });
+  };
 
   const calculateFormattedDate = (date) => {
     const givenDate = new Date(date);
@@ -71,7 +87,7 @@ export default function Active(props) {
   return (
     <div>
       <div>
-        ♥ Active Work!
+        ♥ Received Work!
         <div>
           <div className="todo stack-small">
             {todo &&
@@ -83,10 +99,12 @@ export default function Active(props) {
                     border: "1px solid gray",
                     borderRadius: "20px",
                     display: "flex",
-                    padding: "10px", // Added "px" units to each value
+                    padding: "10px",
                     justifyContent: "center",
                     alignItems: "center",
-                    width: "100%", // Changed "justifyItems" to "alignItems"
+                    width: "100%",
+                    backgroundColor: "white",
+                    marginTop: "8px",
                   }}
                 >
                   <div
@@ -95,7 +113,6 @@ export default function Active(props) {
                       borderBottom: "0.5px solid gray",
                       width: "100%",
                       justifyContent: "space-between",
-                      // margin: "5px 10px",
                       alignItems: "start",
                       padding: "5px 3px",
                     }}
@@ -103,24 +120,20 @@ export default function Active(props) {
                     <div
                       style={{
                         display: "flex",
-                        // alignItems: "center",
                         justifyContent: "start",
                         width: "100%",
                       }}
                     >
-                      
-
                       <div
                         style={{
                           marginRight: "5px",
-                          fontWeight: "bold", // Set font weight to bold
+                          fontWeight: "bold",
                           fontSize: "20px",
                         }}
                       >
                         {todo.todoName}
                       </div>
                     </div>
-                   
                   </div>
                   <div
                     style={{
@@ -153,7 +166,6 @@ export default function Active(props) {
                       {calculateFormattedDate(todo.createdAt)}
                     </div>
                   </div>
-
                   {/* <div>{todo.createdAt}</div> */}
                   <div
                     style={{
@@ -169,13 +181,39 @@ export default function Active(props) {
                     <div style={{}}>{"DUE TO : "}</div>
                     {calculateTimeAgo(todo.scheduledAt)}
                   </div>
-            
-                  <div style={{ display: "flex" ,width:'100%',justifyContent:"space-around"}}>
-                    <button type="submit" className="btn toggle-btn btn__sm">
-                      submit
+
+                  <div
+                    style={{
+                      display: "flex",
+                      width: "100%",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <button
+                      type="submit"
+                      style={{
+                        backgroundColor: "#a4d4b4",
+                        color: "#3b1c32",
+                        fontWeight: "bold",
+                        borderRadius:"10px 10px",
+                      }}
+                      onClick={() => {
+                        UserUpdate(todo._id);
+                        console.log(todo.statusChecker);
+                      }}
+                    >
+                      Submit
                     </button>
-                    <button type="submit" className="btn toggle-btn btn__sm">
-                      cancel
+                    <button
+                      type="submit"
+                      style={{
+                        backgroundColor: "#ef8787",
+                        color: "#3b1c32",
+                        fontWeight: "bold",
+                        borderRadius:"10px 10px"
+                      }}
+                    >
+                      Cancel
                     </button>
                   </div>
                 </div>

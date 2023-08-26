@@ -104,16 +104,17 @@ export default function Testfinal() {
             className="list-group"
             key={todo._id}
             style={{
+              marginTop:"10px",
               border: "1px solid gray",
               borderRadius: "20px",
               backgroundColor:"white",
               display: "flex",
-              padding: "10px", // Added "px" units to each value
+              padding: "10px", 
               justifyContent: "center",
               alignItems: "center",
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
               marginBottom: "10px",
-              width: "100%", // Changed "justifyItems" to "alignItems"
+              width: "100%", 
             }}
           >
             <div
@@ -122,7 +123,6 @@ export default function Testfinal() {
                 borderBottom: "0.5px solid gray",
                 width: "100%",
                 justifyContent: "space-between",
-                // margin: "5px 10px",
                 alignItems: "start",
                 padding: "5px 3px",
               }}
@@ -130,7 +130,6 @@ export default function Testfinal() {
               <div
                 style={{
                   display: "flex",
-                  // alignItems: "center",
                   justifyContent: "start",
                   width: "100%",
                 }}
@@ -139,7 +138,7 @@ export default function Testfinal() {
                   type="checkbox"
                   style={{
                     marginRight: "15px",
-                    fontSize: "16px", // Increase font size
+                    fontSize: "16px",
                     width: "20px",
                   }}
                   checked={todo.statusChecker}
@@ -152,7 +151,7 @@ export default function Testfinal() {
                 <div
                   style={{
                     marginRight: "5px",
-                    fontWeight: "bold", // Set font weight to bold
+                    fontWeight: "bold",
                     fontSize: "20px",
                   }}
                 >
