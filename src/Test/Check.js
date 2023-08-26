@@ -1,22 +1,15 @@
 import React from "react";
 import Active from "./Active";
-
+import FilterButton from "./FilterButton";
 
 export default function Check() {
   return (
     <div>
+          <div className="filters btn-group stack-exception">
+            <FilterButton />
+          </div>
       <div>
         ♥ Check Work!
-        <>
-          <div>
-            <button type="submit" className="btn toggle-btn btn__sm">
-              Complete
-            </button>
-            <button type="submit" className="btn toggle-btn btn__sm">
-              cancel
-            </button>
-          </div>
-        </>
       </div>
     </div>
   );

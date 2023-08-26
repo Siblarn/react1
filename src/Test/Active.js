@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FilterButton from "./FilterButton";
 
 export default function Active(props) {
   const baseURL = "http://61.7.237.18:747/todolists/findList/handler";
@@ -87,6 +88,9 @@ export default function Active(props) {
 
   return (
     <div>
+      <div className="filters btn-group stack-exception">
+        <FilterButton />
+      </div>
       <div>
         ♥ Received Work!
         <div>
@@ -180,12 +184,9 @@ export default function Active(props) {
                       fontSize: "13px",
                     }}
                   >
-                  {/* {todo.status === "active"  && (
-  <div><div style={{}}>
-      DUE TO : {calculateTimeAgo(todo.scheduledAt)}
-    </div>
-  </div>
-)} */}
+                    <div style={{}}>{"DUE TO : "}</div>
+                    {calculateTimeAgo(todo.scheduledAt)}
+                  </div>
 
                   <div
                     style={{
