@@ -338,7 +338,7 @@ export default function Check(props) {
                             UserUpdate_change(todo._id);
                           }}
                         >
-                          ปลด
+                          Remove
                         </button>
 
                         <button
@@ -353,7 +353,7 @@ export default function Check(props) {
                             UserUpdate_return(todo._id);
                           }}
                         >
-                          ตีกลับ
+                          Revise
                         </button>
                       </>
                     )}
@@ -387,7 +387,7 @@ export default function Check(props) {
                             UserUpdate_return(todo._id);
                           }}
                         >
-                          ตีกลับ
+                          Revise
                         </button>
                       </>
                     )}
