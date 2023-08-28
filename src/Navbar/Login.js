@@ -8,8 +8,7 @@ export default function Login() {
   const [inputs, setInputs] = useState({});
   const [result, setResult] = useState({});
   const navigate = useNavigate();
-  const endpoint =
-    "http://61.7.237.18:747";
+  const endpoint = "http://61.7.237.18:747";
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -41,7 +40,7 @@ export default function Login() {
       .then((result) => {
         if (result.data != null) {
           localStorage.setItem("user", JSON.stringify(result.data));
-          window.location.replace('http://localhost:3000/Todolist');
+          window.location.replace("http://localhost:3000/Todolist");
         }
         console.log(result);
       })
@@ -64,7 +63,23 @@ export default function Login() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label class="btn btn-outline-dark mx-1">
+      <label
+        style={{
+          fontFamily: "Ubuntu, sans-serif",
+          fontWeight: "bold",
+          color: "#2b2d42",
+          border: "0.3px solid black",
+          padding: "5px",
+          fontFamily: "Ubuntu, sans-serif",
+          backgroundColor: "#BDC2D0",
+          color: "#3b1c32",
+          fontWeight: "bold",
+          borderRadius: "10px 10px",
+          display:"flex",
+          width:"50%",
+          marginLeft:"10rem"
+        }}
+      >
         Username:
         <input
           type="text"
@@ -73,7 +88,24 @@ export default function Login() {
           onChange={handleChange}
         />
       </label>
-      <label class="btn btn-outline-dark mx-1">
+      <label
+        style={{
+          fontFamily: "Ubuntu, sans-serif",
+          fontWeight: "bold",
+          color: "#2b2d42",
+          border: "0.3px solid black",
+          padding: "5px",
+          fontFamily: "Ubuntu, sans-serif",
+          backgroundColor: "#BDC2D0",
+          color: "#3b1c32",
+          fontWeight: "bold",
+          borderRadius: "10px 10px",
+          width:"50%",
+          display:"flex",
+          marginTop:"5px",
+          marginLeft:"10rem",
+        }}
+      >
         Password:
         <input
           type="password"
@@ -82,8 +114,25 @@ export default function Login() {
           onChange={handleChange}
         />
       </label>
-      <input class="btn btn-outline-success mx-1" type="submit" />
+      <div>
+        <input
+          type="submit"
+          style={{
+            alignItems:"center",
+            justifyContent:"center",
+            border: "0.3px solid black",
+            padding: "5px",
+            fontFamily: "Ubuntu, sans-serif",
+            backgroundColor: "#2B2D42",
+            color: "#EDF2F4",
+            fontWeight: "bold",
+            borderRadius: "10px 10px",
+            marginTop:"10px",
+            marginLeft:"10rem",
+            width:"15%",
+          }}
+        />
+      </div>
     </form>
-  
   );
 }
