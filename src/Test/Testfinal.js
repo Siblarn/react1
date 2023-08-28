@@ -91,13 +91,13 @@ export default function Testfinal() {
   };
 
   return (
-    <div className="todoapp stack-large">
+    <div className="todoapp stack-large" style={{ fontFamily: "Ubuntu, sans-serif",}}>
       <Showmem />
       <Form />
       <div className="filters btn-group stack-exception">
         <FilterButton />
       </div>
-      <h2 className="list-heading">Work List !</h2>
+      <h2 className="list-heading" style={{fontWeight:"500"}}>Work List !</h2>
       <div className="todo stack-small" key={todo._id}>
         {todo.map((todo) => (
           <div

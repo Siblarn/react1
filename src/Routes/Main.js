@@ -10,13 +10,25 @@ export default function Main() {
     if (!isUserLogin01) {
       return (
         <>
-          <Link to="/login">Login</Link>
+          <Link to="/login" style={{
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",}}>Login</Link>
         </>
       );
     } else {
       return (
         <>
-          <Link
+          <Link style={{
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",}}
             to="/"
             onClick={() => {
               localStorage.removeItem("user");
@@ -32,15 +44,46 @@ export default function Main() {
   };
 
   return (
-    <div className="" >
-     
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="">
+      <nav className="navbar navbar-expand-lg bg" >
         <div className="container-fluid">
-          <div className="btn btn-outline-primary">
-            <Link to="/">Home</Link>
+          <div
+            style={{
+              border: "0.3px solid black",
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",
+            }}
+          >
+            <Link to="/" style={{
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",}}>Home</Link>
           </div>
-          <div className="btn btn-outline-primary">
-            <Link to="/Todolist">ToDoList</Link>
+          <div
+            style={{
+              border: "0.3px solid black",
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",
+            }}
+          >
+            <Link to="/Todolist" style={{
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",}}>ToDoList</Link>
           </div>
           {/* <div className="btn btn-outline-primary">
             {!isUserLogin ? (
@@ -61,7 +104,17 @@ export default function Main() {
                   </>
                   )}
                 </div> */}
-          <div className="btn btn-outline-primary">
+          <div
+            style={{
+              border: "0.3px solid black",
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",
+            }}
+          >
             {dynamicLogin(isUserLogin)}
           </div>
           {/* <div className="btn btn-outline-primary">
@@ -74,8 +127,24 @@ export default function Main() {
               Logout
               </Link>
           </div> */}
-          <div className="btn btn-outline-primary">
-            <Link to="/register">Register</Link>
+          <div
+            style={{
+              border: "0.3px solid black",
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",
+            }}
+          >
+            <Link to="/register" style={{
+              padding: "5px",
+              fontFamily: "Ubuntu, sans-serif",
+              backgroundColor: "#BDC2D0",
+              color: "#3b1c32",
+              fontWeight: "bold",
+              borderRadius: "10px 10px",}}>Register</Link>
           </div>
         </div>
       </nav>

@@ -110,7 +110,7 @@ function Form(props) {
           onClick={() => {
             addTask();
           }}
-          style={{ backgroundColor:"#a4d4b4", color:"#3b1c32", fontWeight:"bold"}}
+          style={{ backgroundColor:"#8D99AE", color:"#3b1c32", fontWeight:"bold", fontWeight:"800"}}
         >
           ADD
         </Button>

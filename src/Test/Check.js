@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FilterButton from "./FilterButton";
+import Showmem from "../Member/Showmem"
 
 export default function Check(props) {
   const baseURL = "http://61.7.237.18:747/todolists/findList/owner";
@@ -119,8 +120,9 @@ export default function Check(props) {
 
   return (
     <div>
+      <Showmem/>
       <FilterButton/>
-      <div>
+      <div style={{ fontFamily: "Ubuntu, sans-serif",}}>
         ♥ Review Work!
         <div>
           <div className="todo stack-small">
@@ -259,6 +261,7 @@ export default function Check(props) {
                       display: "flex",
                       width: "100%",
                       justifyContent: "space-around",
+                      margin:"5spx"
                     }}
                   >
                     {/* {todo.status == "complete" && todo.caseHandler && (
@@ -317,6 +320,7 @@ export default function Check(props) {
                             color: "#3b1c32",
                             fontWeight: "bold",
                             borderRadius: "10px 10px",
+                            lineHeight:"10px"
                           }}
                           onClick={() => {
                             UserUpdate_finish(todo._id);
@@ -329,7 +333,7 @@ export default function Check(props) {
                         <button
                           type="submit"
                           style={{
-                            backgroundColor: "#ef8787",
+                            backgroundColor: "#8D99AE",
                             color: "#3b1c32",
                             fontWeight: "bold",
                             borderRadius: "10px 10px",

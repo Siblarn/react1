@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FilterButton from "./FilterButton";
+import Showmem from "../Member/Showmem";
 
 export default function Active(props) {
   const baseURL = "http://61.7.237.18:747/todolists/findList/handler";
@@ -87,7 +88,8 @@ export default function Active(props) {
   };
 
   return (
-    <div>
+    <div style={{ fontFamily: "Ubuntu, sans-serif",}}>
+      <Showmem/>
       <FilterButton/>
       <div>
         ♥ Received Work!

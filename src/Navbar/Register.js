@@ -6,7 +6,7 @@ import { json, useNavigate } from "react-router-dom";
 
 function Register() {
   const [inputs, setInputs] = useState({});
-  const endpoint = "http://61.7.237.18:747"
+  const endpoint = "http://61.7.237.18:747";
   const MySwal = withReactContent(Swal);
   const [navigate, setNavigate] = useState({});
   const handleChange = (event) => {
@@ -52,8 +52,8 @@ function Register() {
       body: raw,
       redirect: "follow",
     };
-  //  "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app/user/new"
-    fetch(`${endpoint}/user/new`,requestOptions)
+    //  "https://2909-2405-9800-bc11-cade-9c61-5e56-40ae-7e88.ngrok-free.app/user/new"
+    fetch(`${endpoint}/user/new`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         if (result.status === "ok") {
@@ -75,7 +75,18 @@ function Register() {
   };
 
   return (
-    <div className="">
+    <div
+      className="m-1 list-group"
+      style={{
+        justifyContent:"center",
+        alignItems:"center",
+        fontFamily: "Ubuntu, sans-serif",
+        fontWeight: "bold",
+        color: "#2b2d42",
+        height:"50%",
+        width:"30%"
+      }}
+    >
       <form onSubmit={handleSubmit}>
         <label>
           Username :
@@ -203,7 +214,19 @@ function Register() {
             onChange={handleChange}
           />
         </label>
-        <input type="submit" />
+        <input
+          type="submit"
+          style={{
+            border: "0.3px solid black",
+            padding: "5px",
+            fontFamily: "Ubuntu, sans-serif",
+            backgroundColor: "#BDC2D0",
+            color: "#3b1c32",
+            fontWeight: "bold",
+            borderRadius: "10px 10px",
+            marginTop:"10px"
+          }}
+        />
       </form>
     </div>
   );
